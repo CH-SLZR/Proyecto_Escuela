@@ -16,7 +16,7 @@
             <h4>Registro de Usuarios</h4>
         </div>
 
-        <form action="registro.php" method="post">
+        <form action="registro_usuarios.php" method="post">
             <div class="login-form">
 
                 <h5>Nombre:</h5>
@@ -34,7 +34,7 @@
                 <h5>Contraseña:</h5>
                 <input type="text" placeholder="Contraseña" name="contra" required />
 
-                <select name="rol">
+                <select name="rol" required>
                     <option value="0" style="display:none;"><label>Seleccionar</label></option>
                     <option value="Paciente">Paciente</option>
                     <option value="Administrador">Administrador</option>
