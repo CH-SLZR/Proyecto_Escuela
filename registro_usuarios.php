@@ -66,14 +66,14 @@ $rol = $_POST["rol"];
 
 if ($rol == "Paciente"){
 
-	$sqlinsert = "INSERT INTO pacientes (id, nombre, apellido_paterno, apellido_materno, email, telefono)
-	VALUES ('$codigo', '$name', '$ape_p', '$ape_m', '$email', '$tel')";
+	$sqlinsert = "INSERT INTO pacientes (nombre, apellido_paterno, apellido_materno, email, telefono)
+	VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
 
 	$insercion = mysqli_query ($conn,$sqlinsert);
 
 	if($insercion == 1){
-		$sqlinsert = "INSERT INTO inicio (id, usuario, contraseña, rol)
-			VALUES ('$codigo','$user', '$pass', '$rol')";
+		$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
+			VALUES ('$user', '$pass', '$rol')";
 
 		$insercion2 = mysqli_query ($conn,$sqlinsert);
 		//echo "exito al insertar";
@@ -82,14 +82,14 @@ if ($rol == "Paciente"){
 
 }elseif ($rol == "Administrador"){
 	
-	$sqlinsert = "INSERT INTO administradores (id, nombre, apellido_paterno, apellido_materno, email, telefono)
-	VALUES ('$codigo', '$name', '$ape_p', '$ape_m', '$email', '$tel')";
+	$sqlinsert = "INSERT INTO administradores (nombre, apellido_paterno, apellido_materno, email, telefono)
+	VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
 
 	$insercion = mysqli_query ($conn,$sqlinsert);
 
 	if($insercion == 1){
-		$sqlinsert = "INSERT INTO inicio (id, usuario, contraseña, rol)
-			VALUES ('$codigo','$user', '$pass', '$rol')";
+		$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
+			VALUES ('$user', '$pass', '$rol')";
 
 		$insercion2 = mysqli_query ($conn,$sqlinsert);
 		//echo "exito al insertar";
@@ -97,10 +97,10 @@ if ($rol == "Paciente"){
 	}
 	
 } if($insercion2 == 1){
-	echo "<script> alert('Registro realizado con exito.');window.location = 'registro_usuarios.html' </script>";
+	echo "<script> alert('Registro realizado con exito.');window.location = 'registro_usuarios.php' </script>";
 }else 
 {
-	echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_usuarios.html' </script>";
+	echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_usuarios.php' </script>";
 	//echo "Error: ".$sql."<br>".mysql_error($conn);
 }
 ?>
