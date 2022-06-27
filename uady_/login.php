@@ -39,7 +39,9 @@
 </html>
 
 
-<?php
+<?
+
+//esto es una prueba para ver si se sincroniza automaticamente con github
 
 session_start();
 if(isset($_SESSION['name_user'])){
