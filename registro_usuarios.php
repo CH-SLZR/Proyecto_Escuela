@@ -53,7 +53,6 @@
 
 <?php
 include('conexion.php');
-include('random.php');
 
 $name = $_POST["name"];
 $ape_p = $_POST["ape_pat"];
