@@ -31,7 +31,7 @@
 
     <button type="submit" class="boton_entrar">Entrar</button>
     </form>
-    
+  
   </div>
 </div>
 
