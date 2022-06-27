@@ -19,16 +19,15 @@
   <div class="login-form">
 
     <h5>Usuario:</h5>
-    <input type="text" placeholder="Usuario" name="user"/><br>
+    <input type="text" placeholder="Usuario" name="user" required/><br>
     <h5>Contraseña:</h5>
-    <input type="password" placeholder="Contraseña" name="contra"/><br>
+    <input type="password" placeholder="Contraseña" name="contra" required/><br>
 
-    <select name="rol">
+    <!-- <select name="rol">
       <option value="0" style="display:none;"><label>Seleccionar</label></option>
       <option value="Paciente">Paciente</option>
       <option value="Administrador">Administrador</option>
-      </select>
-    <br>
+      </select> -->
 
     <button type="submit" class="boton_entrar">Entrar</button>
     </form>
@@ -38,3 +37,29 @@
 
 </body>
 </html>
+
+
+<?php
+
+session_start();
+if(isset($_SESSION['name_user'])){
+	header('');
+}
+
+if (isset ($_POST['boton_entrar'])){
+	
+	include('conexion.php');
+
+	$user = $_POST["user"];
+	$pass = $_POST["contra"];
+	//$rol = $_POST["rol"];
+	
+	$sqlselect = "SELECT * FROM inicio WHERE usuario = '$user' and contraseña = '$pass' /*and rol = '$rol'*/";
+	$seleccionar = mysqli_query ($conn,$sqlselect);
+
+	if($seleccionar ==  1){
+		header('');
+	}
+}
+
+?>

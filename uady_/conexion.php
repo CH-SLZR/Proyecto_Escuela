@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $user, $pass, $database);
 
 // verifica conexion
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Fallo la conexion a la base de datos: " . mysqli_connect_error());
 }
 //echo "Connected successfully";
 //mysqli_close($conn);
