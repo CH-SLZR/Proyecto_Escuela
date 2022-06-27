@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" >
 <head>
-  <meta charset="UTF-8">
+  
   <title>UADY - Inicio de Sesion</title>
   <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'><link rel="stylesheet" href="./style.css">
 
