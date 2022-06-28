@@ -19,6 +19,10 @@
         <form action="" method="post">
             <div class="login-form">
 
+            <?php
+            include('conexion.php');
+            ?>
+
                 <h5>Nombre:</h5>
                 <input type="text" placeholder="Nombre(s)" name="name" required />
                 <h5>Apellido Paterno:</h5>
@@ -51,7 +55,7 @@
 </html>
 
 <?php
-include('conexion.php');
+//include('conexion.php');
 
 $name = $_POST["name"];
 $ape_p = $_POST["ape_pat"];
