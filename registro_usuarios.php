@@ -16,7 +16,7 @@
             <h4>Registro de Usuarios</h4>
         </div>
 
-        <form method="post">
+        <form action="" method="post">
             <div class="login-form">
 
                 <h5>Nombre:</h5>
