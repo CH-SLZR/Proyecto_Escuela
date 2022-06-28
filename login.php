@@ -16,7 +16,7 @@
             <h4>Inicio de Sesion</h4>
         </div>
 
-        <form action="login.php" method="post">
+        <form method="post">
             <div class="login-form">
 
                 <h5>Usuario:</h5>
@@ -40,8 +40,6 @@
 
 
 <?php
-
-//esto es una prueba para ver si se sincroniza automaticamente con github
 
 session_start();
 if(isset($_SESSION['name_user'])){
