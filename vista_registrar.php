@@ -19,10 +19,6 @@
         <form action="" method="post">
             <div class="login-form">
 
-            <?php
-            include('conexion.php');
-            ?>
-
                 <h5>Nombre:</h5>
                 <input type="text" placeholder="Nombre(s)" name="name" required />
                 <h5>Apellido Paterno:</h5>
@@ -45,7 +41,7 @@
                 </select>
                 <br>
 
-                <button type="submit" class="boton_entrar">Registrar</button>
+                <button type="submit" class="boton_entrar" name="registrar">Registrar</button>
                 <br>
                 <a href="login.php"><button type="button">Cerrar sesion</button></a>
             </div>
@@ -55,7 +51,7 @@
 </html>
 
 <?php
-//include('conexion.php');
+include('conexion.php');
 
 $name = $_POST["name"];
 $ape_p = $_POST["ape_pat"];
