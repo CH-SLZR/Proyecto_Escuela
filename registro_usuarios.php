@@ -43,7 +43,7 @@
 
                 <button type="submit" class="boton_entrar">Registrar</button>
                 <br>
-                <a href="index.html"><button type="button">Cerrar sesion</button></a>
+                <a href="login.php"><button type="button">Cerrar sesion</button></a>
             </div>
         </form>
     </div>
