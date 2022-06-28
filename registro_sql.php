@@ -1,52 +1,53 @@
 <?php
 include('conexion.php');
 
-$name = $_POST["name"];
-$ape_p = $_POST["ape_pat"];
-$ape_m = $_POST["ape_mat"];
-$email = $_POST["email"];
-$tel = $_POST["tel"];
-$user = $_POST["user"];
-$pass = $_POST["contra"];
-$rol = $_POST["rol"];
+if(!empty($_POST["registrar"])){
+    
+    if(empty($_POST["name"]) or empty($_POST["ape_pat"]) or empty($_POST["ape_mat"]) or empty($_POST["email"]) or empty($_POST["tel"]) or empty($_POST["user"]) or empty($_POST["contra"])){
+        echo "<script> alert('Un campo esta vacio.')";
+    }else {
+        $name = $_POST["name"];
+        $ape_p = $_POST["ape_pat"];
+        $ape_m = $_POST["ape_mat"];
+        $email = $_POST["email"];
+        $tel = $_POST["tel"];
+        $user = $_POST["user"];
+        $pass = $_POST["contra"];
+        $rol = $_POST["rol"];
 
-if ($rol == "Paciente"){
+        if ($rol == "Paciente"){
+	        $sqlinsert = "INSERT INTO pacientes (nombre, apellido_paterno, apellido_materno, email, telefono)
+	        VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
+	        $insercion = mysqli_query ($conn,$sqlinsert);
 
-	$sqlinsert = "INSERT INTO pacientes (nombre, apellido_paterno, apellido_materno, email, telefono)
-	VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
+	        if($insercion == 1){
+		        $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
+			    VALUES ('$user', '$pass', '$rol')";
 
-	$insercion = mysqli_query ($conn,$sqlinsert);
+		        $insercion2 = mysqli_query ($conn,$sqlinsert);
+		        //echo "exito al insertar";
+	        }
 
-	if($insercion == 1){
-		$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
-			VALUES ('$user', '$pass', '$rol')";
+        }elseif ($rol == "Administrador"){
+	        $sqlinsert = "INSERT INTO administradores (nombre, apellido_paterno, apellido_materno, email, telefono)
+	        VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
+            $insercion = mysqli_query ($conn,$sqlinsert);
 
-		$insercion2 = mysqli_query ($conn,$sqlinsert);
-		//echo "exito al insertar";
+	            if($insercion == 1){
+		            $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
+			        VALUES ('$user', '$pass', '$rol')";
 
-	}
-
-}elseif ($rol == "Administrador"){
+		            $insercion2 = mysqli_query ($conn,$sqlinsert);
+		            //echo "exito al insertar";
+	            }
 	
-	$sqlinsert = "INSERT INTO administradores (nombre, apellido_paterno, apellido_materno, email, telefono)
-	VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
+        } if($insercion2 == 1){
+	         echo "<script> alert('Registro realizado con exito.');window.location = 'registro_usuarios.php' </script>";
+            }else {
+	            echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_usuarios.php' </script>";
+	            //echo "Error: ".$sql."<br>".mysql_error($conn);
+            }
+    }
 
-	$insercion = mysqli_query ($conn,$sqlinsert);
-
-	if($insercion == 1){
-		$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
-			VALUES ('$user', '$pass', '$rol')";
-
-		$insercion2 = mysqli_query ($conn,$sqlinsert);
-		//echo "exito al insertar";
-
-	}
-	
-} if($insercion2 == 1){
-	echo "<script> alert('Registro realizado con exito.');window.location = 'registro_usuarios.php' </script>";
-}else 
-{
-	echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_usuarios.php' </script>";
-	//echo "Error: ".$sql."<br>".mysql_error($conn);
 }
 ?>
