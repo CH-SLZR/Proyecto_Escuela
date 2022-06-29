@@ -58,7 +58,7 @@ if (isset ($_POST['boton_entrar'])){
 	$seleccionar = mysqli_query ($conn,$sqlselect);
 
 	if($seleccionar ==  1){
-		header('');
+		header('registro_vista.php');
 	}
 }
 
