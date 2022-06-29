@@ -1,8 +1,6 @@
 <?php
 include('conexion.php');
 
-if(!empty($_POST["registrar"])){
-
     $name = $_POST["name"];
     $ape_p = $_POST["ape_pat"];
     $ape_m = $_POST["ape_mat"];
@@ -11,11 +9,6 @@ if(!empty($_POST["registrar"])){
     $user = $_POST["user"];
     $pass = $_POST["contra"];
     $rol = $_POST["rol"];
-    
-    if(empty($_POST["name"]) or empty($_POST["ape_pat"]) or empty($_POST["ape_mat"]) or empty($_POST["email"]) or empty($_POST["tel"]) or empty($_POST["user"]) or empty($_POST["contra"]) or empty($_POST["rol"])){
-        echo "<script> alert('Un campo esta vacio.')";
-    }else {
-        //cambio aqui
 
         if ($rol == "Paciente"){
 	        $sqlinsert = "INSERT INTO pacientes (nombre, apellido_paterno, apellido_materno, email, telefono)
@@ -49,7 +42,4 @@ if(!empty($_POST["registrar"])){
 	            echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_usuarios.php' </script>";
 	            //echo "Error: ".$sql."<br>".mysql_error($conn);
             }
-    }
-
-}
 ?>
