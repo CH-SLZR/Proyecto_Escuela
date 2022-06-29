@@ -11,11 +11,13 @@
     $sqlselect = "SELECT * FROM inicio WHERE usuario = '$user' and contraseña = '$pass' /*and rol = '$rol'*/";
 	$seleccionar = mysqli_query ($conn,$sqlselect);
 
-    $filas=mysqli_num_rows($seleccionar);
+    //$filas=mysqli_num_rows($seleccionar);
 
-    if($filas){
+    if($seleccionar){
         header("location:registro_vista.php");
     }else{
         echo "<script> alert('No fue posible iniciar sesion.');window.location = 'login_vista.php' </script>";
     }
+
+    mysqli_close($conn);
 ?>
