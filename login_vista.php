@@ -16,7 +16,7 @@
             <h4>Inicio de Sesion</h4>
         </div>
 
-        <form action="" method="post">
+        <form action="login_sql.php" method="post">
             <div class="login-form">
 
                 <h5>Usuario:</h5>
@@ -37,29 +37,3 @@
 </body>
 
 </html>
-
-
-<?php
-
-session_start();
-if(isset($_SESSION['name_user'])){
-	header('');
-}
-
-if (isset ($_POST['boton_entrar'])){
-	
-	include('conexion.php');
-
-	$user = $_POST["user"];
-	$pass = $_POST["contra"];
-	//$rol = $_POST["rol"];
-	
-	$sqlselect = "SELECT * FROM inicio WHERE usuario = '$user' and contraseña = '$pass' /*and rol = '$rol'*/";
-	$seleccionar = mysqli_query ($conn,$sqlselect);
-
-	if($seleccionar ==  1){
-		header('registro_vista.php');
-	}
-}
-
-?>
