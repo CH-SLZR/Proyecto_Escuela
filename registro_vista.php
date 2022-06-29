@@ -20,19 +20,19 @@
             <div class="login-form">
 
                 <h5>Nombre:</h5>
-                <input type="text" placeholder="Nombre(s)" name="name" required />
+                <input type="text" placeholder="Nombre(s)" name="name" />
                 <h5>Apellido Paterno:</h5>
-                <input type="text" placeholder="Apellido Paterno" name="ape_pat" required />
+                <input type="text" placeholder="Apellido Paterno" name="ape_pat" />
                 <h5>Apellido Materno:</h5>
-                <input type="text" placeholder="Apellido Materno" name="ape_mat" required />
+                <input type="text" placeholder="Apellido Materno" name="ape_mat" />
                 <h5>Correo electronico:</h5>
-                <input type="text" placeholder="Correo electronico" name="email" required />
+                <input type="text" placeholder="Correo electronico" name="email" />
                 <h5>Telefono:</h5>
-                <input type="text" placeholder="Telefono" name="tel" required />
+                <input type="text" placeholder="Telefono" name="tel" />
                 <h5>Usuario:</h5>
-                <input type="text" placeholder="Usuario" name="user" required />
+                <input type="text" placeholder="Usuario" name="user" />
                 <h5>Contraseña:</h5>
-                <input type="text" placeholder="Contraseña" name="contra" required />
+                <input type="text" placeholder="Contraseña" name="contra" />
 
                 <select name="rol" required>
                     <option value="0" style="display:none;"><label>Seleccionar</label></option>

@@ -3,7 +3,7 @@ include('conexion.php');
 
 if(!empty($_POST["registrar"])){
     
-    if(empty($_POST["name"]) or empty($_POST["ape_pat"]) or empty($_POST["ape_mat"]) or empty($_POST["email"]) or empty($_POST["tel"]) or empty($_POST["user"]) or empty($_POST["contra"])){
+    if(empty($_POST["name"]) or empty($_POST["ape_pat"]) or empty($_POST["ape_mat"]) or empty($_POST["email"]) or empty($_POST["tel"]) or empty($_POST["user"]) or empty($_POST["contra"]) or empty($_POST["rol"])){
         echo "<script> alert('Un campo esta vacio.')";
     }else {
         $name = $_POST["name"];
