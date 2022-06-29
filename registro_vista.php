@@ -41,7 +41,7 @@
                 </select>
                 <br>
 
-                <button type="submit" class="boton_entrar" name="registrar">Registrar</button>
+                <button type="submit" class="boton_entrar">Registrar</button>
                 <br>
                 <a href="login.php"><button type="button">Cerrar sesion</button></a>
             </div>
