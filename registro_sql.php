@@ -1,11 +1,6 @@
 <?php
 include('conexion.php');
 
-if(!empty($_POST["registrar"])){
-    
-    if(empty($_POST["name"]) or empty($_POST["ape_pat"]) or empty($_POST["ape_mat"]) or empty($_POST["email"]) or empty($_POST["tel"]) or empty($_POST["user"]) or empty($_POST["contra"]) or empty($_POST["rol"])){
-        echo "<script> alert('Un campo esta vacio.')";
-    }else {
         $name = $_POST["name"];
         $ape_p = $_POST["ape_pat"];
         $ape_m = $_POST["ape_mat"];
@@ -47,6 +42,4 @@ if(!empty($_POST["registrar"])){
 	            echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_vista.php' </script>";
 	            //echo "Error: ".$sql."<br>".mysql_error($conn);
             }
-    }
-}
 ?>
