@@ -30,7 +30,7 @@
                <option value="Administrador">Administrador</option>
                 </select> -->
 
-                <button type="submit" class="boton_entrar">Entrar</button>
+                <button type="submit" class="boton_entrar" name="entrar">Entrar</button>
             </div>
         </form>
   </div>
