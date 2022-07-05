@@ -1,4 +1,5 @@
 <?php
+//prueba de actualizaion remota
 include('conexion.php');
 
         $name = $_POST["name"];
