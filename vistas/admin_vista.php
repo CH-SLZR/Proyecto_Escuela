@@ -19,7 +19,7 @@
     
     <table>
       <tr>
-    <td><button type="submit" class="add_paciente">Agregar Paciente</button><br><br><br><br>
+    <td><a href="registro_vista.php"><button type="submit" class="add_paciente">Agregar Paciente</button><br><br><br><br></a>
     <td><button type="submit" class="edit_paciente">Editar Paciente</button><br><br><br><br>
     <td><button type="submit" class="delete_paciente">Eliminar Paciente</button><br><br><br><br>
       </tr>
@@ -27,7 +27,7 @@
       <br><br>
 
       <tr>
-    <td><button type="submit" class="add_admin">Agregar Administrador</button><br><br><br><br>
+    <td><a href="registro_vista.php"><button type="submit" class="add_admin">Agregar Administrador</button><br><br><br><br></a>
     <td><button type="submit" class="add_admin">Editar Administrador</button><br><br><br><br>
     <td><button type="submit" class="delete_admin">Eliminar Administrador</button><br><br><br><br>
       </tr>
