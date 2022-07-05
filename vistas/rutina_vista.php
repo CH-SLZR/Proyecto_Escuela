@@ -29,7 +29,7 @@
 
     <button type="submit" class="boton_obtener">Obtener Rutina</button>
     <br>
-    <a href="index.php"><button type="button">Cerrar sesion</button></a>
+    <a href="../index.php"><button type="button">Cerrar sesion</button></a>
     <br>
     <br>
   </div>
