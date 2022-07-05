@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>UADY - Pagina de administradores</title>
-  <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+  <link rel="stylesheet" href="../style.css">
 
 </head>
 <body>
