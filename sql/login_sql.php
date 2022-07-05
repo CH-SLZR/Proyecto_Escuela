@@ -11,13 +11,17 @@
     $sqlselect = "SELECT * FROM inicio WHERE usuario = '$user' and contraseña = '$pass' /*and rol = '$rol'*/";
 	$result = mysqli_query ($conn,$sqlselect);
 
-    $filas=mysqli_num_rows($result);
+    $filas=mysqli_fetch_array($result);
 
-    if($filas){
+    if($filas['rol']=="Administrador"){
         header("location:../vistas/registro_vista.php");
-    }else{
-        echo "<script> alert('No fue posible iniciar sesion.');window.location = '../vistas/login_vista.php' </script>";
-    }
+
+        }elseif($filas['rol']=="Paciente"){
+            header("location:../ingreso_datos.php");
+
+        }else{
+            echo "<script> alert('No fue posible iniciar sesion.');window.location = '../vistas/login_vista.php' </script>";
+        }
 
     mysqli_close($conn);
 ?>
