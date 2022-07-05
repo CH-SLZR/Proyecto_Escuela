@@ -16,7 +16,7 @@
             <h4>Inicio de Sesion</h4>
         </div>
 
-        <form action="login_sql.php" method="post">
+        <form action="../sql/login_sql.php" method="post">
             <div class="login-form">
 
                 <h5>Usuario:</h5>

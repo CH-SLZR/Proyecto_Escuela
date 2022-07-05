@@ -16,7 +16,7 @@
             <h4>Registro de Usuarios</h4>
         </div>
 
-        <form action="registro_sql.php" method="post">
+        <form action="../sql/registro_sql.php" method="post">
             <div class="login-form">
 
                 <h5>Nombre:</h5>
