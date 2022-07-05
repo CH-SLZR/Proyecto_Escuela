@@ -17,7 +17,7 @@
         header("location:../vistas/registro_vista.php");
 
         }elseif($filas['rol']=="Paciente"){
-            header("location:../ingreso_datos.php");
+            header("location:../rutina_vista.php");
 
         }else{
             echo "<script> alert('No fue posible iniciar sesion.');window.location = '../vistas/login_vista.php' </script>";
