@@ -1,3 +1,3 @@
 <?php
-    header('login.php');
+    header('vistas/login_vista.php');
 ?>
