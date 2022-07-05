@@ -20,7 +20,8 @@
             header("location:../vistas/rutina_vista.php");
 
         }else{
-            echo "<script> alert('No fue posible iniciar sesion.');window.location = '../vistas/login_vista.php' </script>";
+            echo "<script> alert('No fue posible iniciar sesion.
+                                Usuario o contraseña incorrecto');window.location = '../vistas/login_vista.php' </script>";
         }
 
     mysqli_close($conn);
