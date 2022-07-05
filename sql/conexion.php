@@ -12,5 +12,4 @@ if (!$conn) {
 }
 //echo "Connected successfully";
 //mysqli_close($conn);
-//prueba de vinculacion
 ?>
