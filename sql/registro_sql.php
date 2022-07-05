@@ -37,9 +37,9 @@ include('conexion.php');
 	            }
 	
         } if($insercion2 == 1){
-	         echo "<script> alert('Registro realizado con exito.');window.location = 'registro_vista.php' </script>";
+	         echo "<script> alert('Registro realizado con exito.');window.location = '../vistas/registro_vista.php' </script>";
             }else {
-	            echo "<script> alert('Intento de registro fallido. ');window.location = 'registro_vista.php' </script>";
+	            echo "<script> alert('Intento de registro fallido. ');window.location = '../vistas/registro_vista.php' </script>";
 	            //echo "Error: ".$sql."<br>".mysql_error($conn);
             }
 ?>

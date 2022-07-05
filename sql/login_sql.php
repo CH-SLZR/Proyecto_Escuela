@@ -14,9 +14,9 @@
     //$filas=mysqli_num_rows($seleccionar);
 
     if($seleccionar){
-        header("location:registro_vista.php");
+        header("location:../vistas/registro_vista.php");
     }else{
-        echo "<script> alert('No fue posible iniciar sesion.');window.location = 'login_vista.php' </script>";
+        echo "<script> alert('No fue posible iniciar sesion.');window.location = '../vistas/login_vista.php' </script>";
     }
 
     mysqli_close($conn);
