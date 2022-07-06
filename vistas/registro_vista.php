@@ -21,16 +21,22 @@
 
                 <h5>Nombre:</h5>
                 <input type="text" placeholder="Nombre(s)" name="name" required/>
+
                 <h5>Apellido Paterno:</h5>
                 <input type="text" placeholder="Apellido Paterno" name="ape_pat" required/>
+
                 <h5>Apellido Materno:</h5>
                 <input type="text" placeholder="Apellido Materno" name="ape_mat"required/>
+
                 <h5>Correo electronico:</h5>
                 <input type="text" placeholder="Correo electronico" name="email" required/>
+
                 <h5>Telefono:</h5>
                 <input type="text" placeholder="Telefono" name="tel" required/>
+
                 <h5>Usuario:</h5>
                 <input type="text" placeholder="Usuario" name="user" required/>
+                
                 <h5>Contraseña:</h5>
                 <input type="text" placeholder="Contraseña" name="contra" required/>
 

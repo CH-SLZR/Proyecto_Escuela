@@ -21,6 +21,7 @@
 
                 <h5>Usuario:</h5>
                 <input type="text" placeholder="Usuario" name="user" required /><br>
+                
                 <h5>Contraseña:</h5>
                 <input type="password" placeholder="Contraseña" name="contra" required /><br>
 
