@@ -33,7 +33,7 @@
       </tr>
     </table>
 
-    <a href="index.html"><button type="button">Cerrar sesion</button></a>
+    <a href="../index.php"><button type="button">Cerrar sesion</button></a>
     
   </div>
 </div>
