@@ -1,15 +1,17 @@
 <?php
     include("../sql/conexion.php");
 
-$cod_estudiante=$_POST['cod_estudiante'];
-$dni=$_POST['dni'];
-$nombres=$_POST['nombres'];
-$apellidos=$_POST['apellidos'];
+$id=$_POST['id'];
+$nombre=$_POST['nombre'];
+$ape_pat=$_POST['apellido_paterno'];
+$ape_mat=$_POST['apellido_materno'];
+$email=$_POST['email'];
+$tel=$_POST['telefono'];
 
-$sql="UPDATE alumno SET  dni='$dni',nombres='$nombres',apellidos='$apellidos' WHERE cod_estudiante='$cod_estudiante'";
-$query=mysqli_query($con,$sql);
+$sql="UPDATE alumno SET id='$id', nombre='$nombre', apellido_paterno='$ape_pat', apellido_mateno='$ape_mat', email='$email', telefono='$tel' WHERE id='$id'";
+$query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: alumno.php");
+        Header("Location: create.php");
     }
 ?>
