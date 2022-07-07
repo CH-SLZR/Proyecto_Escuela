@@ -8,8 +8,8 @@
 
 <head>
     <title>UADY - Registro de Usuarios</title>
-    <!-- <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-  <link rel="stylesheet" href="../style.css"> -->
+<link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -17,7 +17,6 @@
 
     <div class="login">
         <div class="login-header">
-            <br>
             <h4>Registro de Usuarios</h4>
         </div>
 
@@ -57,7 +56,16 @@
                 <a href="../index.php"><button type="button">Cerrar sesion</button></a>
             </div>
         </form>
+
+        <div class="login-header">
+            <h4>Tablas de Datos</h4>
+        </div>
+
         <!-- empieza tabla administradores -->
+        <div class="login-header">
+            <h5>Tablas de Administradores</h5>
+        </div>
+
         <div class="tabla_admins">
             <table class="table">
                 <thead class="table-success table-striped">
@@ -92,7 +100,50 @@
         </div>
         <!-- termina tabla administradores -->
 
+        <!-- empieza tabla pacientes -->
+        <div class="login-header">
+            <h5>Tablas de Pacientes</h5>
+        </div>
+
+        <div class="tabla_admins">
+            <table class="table">
+                <thead class="table-success table-striped">
+                    <tr>
+                        <th>nombre</th>
+                        <th>apellido paterno</th>
+                        <th>apellido mateno</th>
+                        <th>email</th>
+                        <th>telefono</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php
+                                         while($row=mysqli_fetch_array($query_paci)){
+                        ?>
+                    <tr>
+                        <th><?php  echo $row['nombre']?></th>
+                        <th><?php  echo $row['apellido_paterno']?></th>
+                        <th><?php  echo $row['apellido_materno']?></th>
+                        <th><?php  echo $row['email']?></th>
+                        <th><?php  echo $row['telefono']?></th>
+
+                        <th><a href="edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a></th>
+                    </tr>
+                    <?php 
+                                            }
+                                        ?>
+                </tbody>
+            </table>
+        </div>
+        <!-- termina tabla pacientes -->
+
         <!-- empieza tabla inicio -->
+        <div class="login-header">
+            <h5>Tablas de Usuarios</h5>
+        </div>
+
         <div class="tabla_inicio">
             <table class="table">
                 <thead class="table-success table-striped">
