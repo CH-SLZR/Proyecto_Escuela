@@ -8,8 +8,8 @@
 
 <head>
     <title>UADY - Registro de Usuarios</title>
-<link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-<link rel="stylesheet" href="../style.css">
+    <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -70,6 +70,7 @@
             <table class="table">
                 <thead class="table-success table-striped">
                     <tr>
+                        <th>id</th>
                         <th>nombre</th>
                         <th>apellido paterno</th>
                         <th>apellido mateno</th>
@@ -83,6 +84,7 @@
                                          while($row=mysqli_fetch_array($query_admin)){
                         ?>
                     <tr>
+                        <th><?php  echo $row['id']?></th>
                         <th><?php  echo $row['nombre']?></th>
                         <th><?php  echo $row['apellido_paterno']?></th>
                         <th><?php  echo $row['apellido_materno']?></th>
@@ -90,7 +92,8 @@
                         <th><?php  echo $row['telefono']?></th>
 
                         <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a></th>
+                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        </th>
                     </tr>
                     <?php 
                                             }
@@ -109,6 +112,7 @@
             <table class="table">
                 <thead class="table-success table-striped">
                     <tr>
+                        <th>id</th>
                         <th>nombre</th>
                         <th>apellido paterno</th>
                         <th>apellido mateno</th>
@@ -122,6 +126,7 @@
                                          while($row=mysqli_fetch_array($query_paci)){
                         ?>
                     <tr>
+                        <th><?php  echo $row['id']?></th>
                         <th><?php  echo $row['nombre']?></th>
                         <th><?php  echo $row['apellido_paterno']?></th>
                         <th><?php  echo $row['apellido_materno']?></th>
@@ -129,7 +134,8 @@
                         <th><?php  echo $row['telefono']?></th>
 
                         <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a></th>
+                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        </th>
                     </tr>
                     <?php 
                                             }
@@ -148,6 +154,7 @@
             <table class="table">
                 <thead class="table-success table-striped">
                     <tr>
+                        <th>id</th>
                         <th>usuario</th>
                         <th>contraseña</th>
                         <th>rol</th>
@@ -159,12 +166,14 @@
                                          while($row=mysqli_fetch_array($query_ini)){
                         ?>
                     <tr>
+                        <th><?php  echo $row['id']?></th>
                         <th><?php  echo $row['usuario']?></th>
                         <th><?php  echo $row['contraseña']?></th>
                         <th><?php  echo $row['rol']?></th>
 
                         <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a></th>
+                        <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        </th>
                     </tr>
                     <?php 
                                             }
