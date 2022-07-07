@@ -52,8 +52,12 @@
             <h5>Telefono:</h5>
             <input type="text" placeholder="Telefono" name="tel" 
                 value="<?php echo $row['telefono'] ?>" required />
+            <br><br>
 
-            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
+            <input type="submit" class="btn_actualizar" value="Actualizar"><br><br>
+
+            <a href="../vistas/admin_vista.php">
+            <input type="submit" class="btn_cancelar" value="Cancelar"></a>
         </form>
 
     </div>
