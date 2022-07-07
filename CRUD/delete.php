@@ -1,6 +1,5 @@
 <?php
-
-include("sql/conexion.php");
+    include("../sql/conexion.php");
 
 $cod_estudiante=$_GET['id'];
 

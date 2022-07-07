@@ -1,5 +1,5 @@
 <?php 
-    include("conexion.php");
+    include("../sql/conexion.php");
 
 $id=$_GET['id'];
 

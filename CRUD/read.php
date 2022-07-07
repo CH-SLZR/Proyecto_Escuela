@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+    include("../sql/conexion.php");
 
 $select_admin="SELECT * FROM administradores";
 $query_admin=mysqli_query($conn,$select_admin);

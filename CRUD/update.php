@@ -1,6 +1,5 @@
 <?php
-
-include("conexion.php");
+    include("../sql/conexion.php");
 
 $cod_estudiante=$_POST['cod_estudiante'];
 $dni=$_POST['dni'];

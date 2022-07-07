@@ -1,9 +1,8 @@
 <?php 
-    include("conexion.php");
-
-    $sql="SELECT *  FROM inicio";
-    $query=mysqli_query($conn,$sql);
+    include("../sql/conexion.php");
+    include("read");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +73,7 @@
 
                     <tbody>
                         <?php
-                                         while($row=mysqli_fetch_array($query)){
+                                         while($row=mysqli_fetch_array($query_admin)){
                         ?>
                         <tr>
                             <th><?php  echo $row['cod_estudiante']?></th>
