@@ -22,7 +22,7 @@ $row=mysqli_fetch_array($query_admin);
 
 <body>
     <div class="container mt-5">
-        <form action="update.php" method="POST">
+        <form action="update_admin.php" method="POST">
 
             <h5>ID:</h5>
             <input type="text" placeholder="ID" name="id" 
