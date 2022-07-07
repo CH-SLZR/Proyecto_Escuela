@@ -62,10 +62,12 @@
                 <table class="table">
                     <thead class="table-success table-striped">
                         <tr>
-                            <th>Codigo</th>
-                            <th>Dni</th>
-                            <th>Nombres</th>
-                            <th>pellidos</th>
+                            <th>id</th>
+                            <th>nombe</th>
+                            <th>apellido paterno</th>
+                            <th>apellido mateno</th>
+                            <th>email</th>
+                            <th>telefono</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -76,13 +78,15 @@
                                          while($row=mysqli_fetch_array($query_admin)){
                         ?>
                         <tr>
-                            <th><?php  echo $row['cod_estudiante']?></th>
-                            <th><?php  echo $row['dni']?></th>
-                            <th><?php  echo $row['nombres']?></th>
-                            <th><?php  echo $row['apellidos']?></th>
-                            <th><a href="edit.php?id=<?php echo $row['cod_estudiante'] ?>"
+                            <th><?php  echo $row['id']?></th>
+                            <th><?php  echo $row['nombre']?></th>
+                            <th><?php  echo $row['apellido_paterno']?></th>
+                            <th><?php  echo $row['apellido_materno']?></th>
+                            <th><?php  echo $row['email']?></th>
+                            <th><?php  echo $row['telefono']?></th>
+                            <th><a href="edit.php?id=<?php echo $row['id'] ?>"
                                     class="btn btn-info">Editar</a></th>
-                            <th><a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>"
+                            <th><a href="delete.php?id=<?php echo $row['id'] ?>"
                                     class="btn btn-danger">Eliminar</a></th>
                         </tr>
                         <?php 
