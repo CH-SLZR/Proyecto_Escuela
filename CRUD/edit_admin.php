@@ -2,8 +2,13 @@
     include("../sql/conexion.php");
     include("read.php");
 
-$row=mysqli_fetch_array($query_admin);
+    $id=$_GET['id'];
 
+    $sql="SELECT * FROM administradores WHERE id='$id'";
+    $query=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_array($query);
+
+//$row=mysqli_fetch_array($query_admin);
 ?>
 
 <!DOCTYPE html>
