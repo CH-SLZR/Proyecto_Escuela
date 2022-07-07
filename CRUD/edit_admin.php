@@ -26,19 +26,26 @@ $row=mysqli_fetch_array($query);
     <div class="container mt-5">
         <form action="update.php" method="POST">
 
-            <input type="hidden" name="cod_estudiante" value="<?php echo $row['id']  ?>">
-            <input type="text" class="form-control mb-3" name="dni" placeholder="Dni"
-                value="<?php echo $row['nombre']  ?>">
-            <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres"
-                value="<?php echo $row['apellido_paterno']  ?>">
-            <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos"
-                value="<?php echo $row['apellido_materno']  ?>">
-            <input type="text" class="form-control mb-3" name="email" placeholder="email"
-                value="<?php echo $row['email']  ?>">
-            <input type="text" class="form-control mb-3" name="telefono" placeholder="telefono"
-                value="<?php echo $row['telefono']  ?>">
+            <input type="text" name="id" value="<?php echo $row['id']  ?>">
 
-            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
+            <h5>Nombre:</h5>
+            <input type="text" placeholder="Nombre(s)" name="name" value="<?php echo $row['nombre'] ?>" required />
+
+            <h5>Apellido Paterno:</h5>
+            <input type="text" placeholder="Apellido Paterno" name="ape_pat"
+                value="<?php echo $row['apellido_paterno'] ?>" required />
+
+            <h5>Apellido Materno:</h5>
+            <input type="text" placeholder="Apellido Materno" name="ape_mat"
+                value="<?php echo $row['apellido_materno'] ?>" required />
+
+            <h5>Correo electronico:</h5>
+            <input type="text" placeholder="Correo electronico" name="email" value="<?php echo $row['email'] ?>"
+                required />
+
+            <h5>Telefono:</h5>
+            <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
+
         </form>
 
     </div>
