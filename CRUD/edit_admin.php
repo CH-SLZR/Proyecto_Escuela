@@ -26,7 +26,8 @@ $row=mysqli_fetch_array($query);
     <div class="container mt-5">
         <form action="update.php" method="POST">
 
-            <input type="text" name="id" value="<?php echo $row['id']  ?>">
+            <h5>ID:</h5>
+            <input type="text" placeholder="ID" name="id" value="<?php echo $row['id'] ?>">
 
             <h5>Nombre:</h5>
             <input type="text" placeholder="Nombre(s)" name="name" value="<?php echo $row['nombre'] ?>" required />
