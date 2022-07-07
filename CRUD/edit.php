@@ -3,9 +3,8 @@
 
 $id=$_GET['id'];
 
-$sql="SELECT * FROM alumno WHERE cod_estudiante='$id'";
-$query=mysqli_query($con,$sql);
-
+$sql="SELECT * FROM administradores WHERE id='$id'";
+$query=mysqli_query($conn,$sql);
 $row=mysqli_fetch_array($query);
 ?>
 
@@ -24,10 +23,12 @@ $row=mysqli_fetch_array($query);
                 <div class="container mt-5">
                     <form action="update.php" method="POST">
                     
-                                <input type="hidden" name="cod_estudiante" value="<?php echo $row['cod_estudiante']  ?>">
-                                <input type="text" class="form-control mb-3" name="dni" placeholder="Dni" value="<?php echo $row['dni']  ?>">
-                                <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $row['nombres']  ?>">
-                                <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellidos']  ?>">
+                                <input type="hidden" name="cod_estudiante" value="<?php echo $row['id']  ?>">
+                                <input type="text" class="form-control mb-3" name="dni" placeholder="Dni" value="<?php echo $row['nombre']  ?>">
+                                <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres" value="<?php echo $row['apellido_paterno']  ?>">
+                                <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="<?php echo $row['apellido_materno']  ?>">
+                                <input type="text" class="form-control mb-3" name="email" placeholder="email" value="<?php echo $row['email']  ?>">
+                                <input type="text" class="form-control mb-3" name="telefono" placeholder="telefono" value="<?php echo $row['telefono']  ?>">
                                 
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>
