@@ -1,6 +1,6 @@
 <?php 
     include("../sql/conexion.php");
-    include("read");
+    include("read.php");
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@
                             <th><?php  echo $row['dni']?></th>
                             <th><?php  echo $row['nombres']?></th>
                             <th><?php  echo $row['apellidos']?></th>
-                            <th><a href="actualizar.php?id=<?php echo $row['cod_estudiante'] ?>"
+                            <th><a href="edit.php?id=<?php echo $row['cod_estudiante'] ?>"
                                     class="btn btn-info">Editar</a></th>
                             <th><a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>"
                                     class="btn btn-danger">Eliminar</a></th>
