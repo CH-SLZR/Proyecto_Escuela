@@ -2,13 +2,13 @@
     include("../sql/conexion.php");
 
 $id=$_POST['id'];
-$nombre=$_POST['nombre'];
-$ape_pat=$_POST['apellido_paterno'];
-$ape_mat=$_POST['apellido_materno'];
-$email=$_POST['email'];
-$tel=$_POST['telefono'];
+$name = $_POST["name"];
+$ape_p = $_POST["ape_pat"];
+$ape_m = $_POST["ape_mat"];
+$email = $_POST["email"];
+$tel = $_POST["tel"];
 
-$sql="UPDATE alumno SET id='$id', nombre='$nombre', apellido_paterno='$ape_pat', apellido_mateno='$ape_mat', email='$email', telefono='$tel' WHERE id='$id'";
+$sql="UPDATE administradores SET id='$id', nombre='$name', apellido_paterno='$ape_pat', apellido_mateno='$ape_mat', email='$email', telefono='$tel' WHERE id='$id'";
 $query=mysqli_query($conn,$sql);
 
     if($query){
