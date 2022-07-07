@@ -1,11 +1,9 @@
 <?php 
     include("../sql/conexion.php");
+    include("read.php");
 
-$id=$_GET['id'];
+$row=mysqli_fetch_array($query_admin);
 
-$sql="SELECT * FROM administradores WHERE id='$id'";
-$query=mysqli_query($conn,$sql);
-$row=mysqli_fetch_array($query);
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +25,12 @@ $row=mysqli_fetch_array($query);
         <form action="update.php" method="POST">
 
             <h5>ID:</h5>
-            <input type="text" placeholder="ID" name="id" value="<?php echo $row['id'] ?>">
+            <input type="text" placeholder="ID" name="id" 
+                value="<?php echo $row['id'] ?>" readonly="readonly">
 
             <h5>Nombre:</h5>
-            <input type="text" placeholder="Nombre(s)" name="name" value="<?php echo $row['nombre'] ?>" required />
+            <input type="text" placeholder="Nombre(s)" name="name" 
+                value="<?php echo $row['nombre'] ?>" required />
 
             <h5>Apellido Paterno:</h5>
             <input type="text" placeholder="Apellido Paterno" name="ape_pat"
@@ -41,12 +41,14 @@ $row=mysqli_fetch_array($query);
                 value="<?php echo $row['apellido_materno'] ?>" required />
 
             <h5>Correo electronico:</h5>
-            <input type="text" placeholder="Correo electronico" name="email" value="<?php echo $row['email'] ?>"
-                required />
+            <input type="text" placeholder="Correo electronico" name="email" 
+                value="<?php echo $row['email'] ?>" required />
 
             <h5>Telefono:</h5>
-            <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
+            <input type="text" placeholder="Telefono" name="tel" 
+                value="<?php echo $row['telefono'] ?>" required />
 
+            <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
         </form>
 
     </div>

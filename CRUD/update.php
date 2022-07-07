@@ -12,6 +12,6 @@ $sql="UPDATE administradores SET nombre='$name', apellido_paterno='$ape_pat', ap
 $query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: create.php");
+        Header("Location: ../vistas/registro_vista.php");
     }
 ?>
