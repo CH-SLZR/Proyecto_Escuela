@@ -3,6 +3,7 @@ $servername = "localhost";
 $database = "consultorio";
 $user = "root";
 $pass = "";
+
 // Crea conexion
 $conn = mysqli_connect($servername, $user, $pass, $database);
 
