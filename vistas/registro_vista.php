@@ -49,7 +49,7 @@
 
                 <button type="submit" class="boton_entrar" name="registrar">Registrar</button>
                 <br>
-                <a href="login_vista.php"><button type="button">Cerrar sesion</button></a>
+                <a href="../index.php"><button type="button">Cerrar sesion</button></a>
             </div>
         </form>
     </div>
