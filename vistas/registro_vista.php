@@ -91,7 +91,7 @@
                         <th><?php  echo $row['email']?></th>
                         <th><?php  echo $row['telefono']?></th>
 
-                        <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="../CRUD/edit_admin.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
@@ -133,7 +133,7 @@
                         <th><?php  echo $row['email']?></th>
                         <th><?php  echo $row['telefono']?></th>
 
-                        <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="../CRUD/edit_paci.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
@@ -171,7 +171,7 @@
                         <th><?php  echo $row['contraseña']?></th>
                         <th><?php  echo $row['rol']?></th>
 
-                        <th><a href="../CRUD/edit.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="../CRUD/edit_ini.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
