@@ -2,7 +2,7 @@
     include("conexion.php");
 
     $sql="SELECT *  FROM alumno";
-    $query=mysqli_query($con,$sql);
+    $query=mysqli_query($conn,$sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
