@@ -7,8 +7,6 @@
     $sql="SELECT * FROM administradores WHERE id='$id'";
     $query=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($query);
-
-//$row=mysqli_fetch_array($query_admin);
 ?>
 
 <!DOCTYPE html>
@@ -62,5 +60,4 @@
 
     </div>
 </body>
-
 </html>
