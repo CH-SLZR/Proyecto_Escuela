@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2022 a las 08:39:13
+-- Tiempo de generación: 08-07-2022 a las 00:01:38
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `administradores` (
-  `id` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido_paterno` varchar(50) NOT NULL,
   `apellido_materno` varchar(50) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `telefono` int(10) NOT NULL
+  `telefono` bigint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,7 +41,8 @@ CREATE TABLE `administradores` (
 --
 
 INSERT INTO `administradores` (`id`, `nombre`, `apellido_paterno`, `apellido_materno`, `email`, `telefono`) VALUES
-('9RG4o27', 'tony', 'perez', 'pech', 'tony@email.com', 2147483647);
+(1, 'paco', 'chan', 'chan', 'paco@mail.com', 9961524399),
+(3, 'angel', 'perez', 'perez', 'angel@mail.com', 9999615235);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ CREATE TABLE `historial` (
 --
 
 CREATE TABLE `inicio` (
-  `id` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `usuario` varchar(200) NOT NULL,
   `contraseña` varchar(15) NOT NULL,
   `rol` varchar(20) NOT NULL
@@ -73,9 +74,11 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `usuario`, `contraseña`, `rol`) VALUES
-('9RG4o27', 'tony@email.com', 'contratony', 'Administrador'),
-('GZ764H1', 'edu@mail.com', 'contraedu', 'Paciente'),
-('r276y44', 'angel@mail.com', 'contraangel', 'Paciente');
+(1, 'juan', 'juan123', 'Paciente'),
+(2, 'jose', 'jose123', 'Administrador'),
+(3, 'angel', 'angel123', 'Administrador'),
+(4, 'lalo', 'lalo123', 'Paciente'),
+(5, 'pepe', 'pepe123', 'Paciente');
 
 -- --------------------------------------------------------
 
@@ -84,12 +87,12 @@ INSERT INTO `inicio` (`id`, `usuario`, `contraseña`, `rol`) VALUES
 --
 
 CREATE TABLE `pacientes` (
-  `id` varchar(10) NOT NULL,
+  `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido_paterno` varchar(50) NOT NULL,
   `apellido_materno` varchar(50) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `telefono` int(10) NOT NULL
+  `telefono` bigint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -97,8 +100,9 @@ CREATE TABLE `pacientes` (
 --
 
 INSERT INTO `pacientes` (`id`, `nombre`, `apellido_paterno`, `apellido_materno`, `email`, `telefono`) VALUES
-('GZ764H1', 'edu', 'naz', 'naz', 'edu@mail.com', 2147483647),
-('r276y44', 'angel', 'uk', 'pech', 'angel@mail.com', 2147483647);
+(1, 'juan', 'perez', 'perez', 'juan@mail.com', 2147483647),
+(2, 'lalo', 'uk', 'uk', 'lalo@gmail.com', 2147483647),
+(3, 'pepe', 'pech', 'pech', 'pepe@mail.com', 2147483647);
 
 --
 -- Índices para tablas volcadas
@@ -121,6 +125,44 @@ ALTER TABLE `inicio`
 --
 ALTER TABLE `pacientes`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `inicio`
+--
+ALTER TABLE `inicio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `pacientes`
+--
+ALTER TABLE `pacientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD CONSTRAINT `administradores_ibfk_1` FOREIGN KEY (`id`) REFERENCES `inicio` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `pacientes`
+--
+ALTER TABLE `pacientes`
+  ADD CONSTRAINT `pacientes_ibfk_1` FOREIGN KEY (`id`) REFERENCES `inicio` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
