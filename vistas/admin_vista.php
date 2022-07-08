@@ -45,7 +45,7 @@
                 <input type="text" placeholder="Contraseña" name="contra" required />
 
                 <select name="rol" required>
-                    <option value="0" style="display:none;"><label>Seleccionar</label></option>
+                    <label>Seleccionar</label></option>
                     <option value="Paciente">Paciente</option>
                     <option value="Administrador">Administrador</option>
                 </select>
