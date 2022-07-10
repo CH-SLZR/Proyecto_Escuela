@@ -30,7 +30,7 @@ include('../CRUD/read.php');
 				$id_paci = $row['id'];
 
 					$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_admin, id_paci)
-					VALUES ('$user', '$pass', '$rol', '', '$id_paci')";
+					VALUES ('$user', '$pass', '$rol', 'NULL', '$id_paci')";
 	
 					$insercion2 = mysqli_query ($conn,$sqlinsert);
 					//echo "exito al insertar";

@@ -158,6 +158,8 @@
                         <th>usuario</th>
                         <th>contraseña</th>
                         <th>rol</th>
+                        <th>id_admin</th>
+                        <th>id_paciente</th>
                     </tr>
                 </thead>
 
@@ -170,6 +172,8 @@
                         <th><?php  echo $row['usuario']?></th>
                         <th><?php  echo $row['contraseña']?></th>
                         <th><?php  echo $row['rol']?></th>
+                        <th><?php  echo $row['id_admin']?></th>
+                        <th><?php  echo $row['id_paci']?></th>
 
                         <th><a href="../CRUD/edit_ini.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete_ini.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
