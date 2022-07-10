@@ -49,35 +49,23 @@
             <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
             <br><br>
 
-            <input type="submit" class="btn_actualizar" value="Actualizar">
+            <input type="submit" class="btn_actualizar" value="Actualizar"> <br><br>
         </form>
 
         <!-- inicia segundo form para el boton de editar usuario -->
-        <form action="update_ini_vista.php" method="POST">
-
-            <input type="hidden" placeholder="ID" name="id" 
-                value="<?php echo $row['id'] ?>" readonly="readonly">
-
-            <input type="hidden" placeholder="Nombre(s)" name="name" 
-                value="<?php echo $row['nombre'] ?>" required />
-
-            <input type="hidden" placeholder="Apellido Paterno" name="ape_pat"
-                value="<?php echo $row['apellido_paterno'] ?>" required />
-
-            <input type="hidden" placeholder="Apellido Materno" name="ape_mat"
-                value="<?php echo $row['apellido_materno'] ?>" required />
-
-            <input type="hidden" placeholder="Correo electronico" name="email" 
-                value="<?php echo $row['email'] ?>" required />
-
-            <input type="hidden" placeholder="Telefono" name="tel" 
-                value="<?php echo $row['telefono'] ?>" required />
-            <br>
-
-            <input type="submit" class="btn_actualizar" value="Editar Usuario"><br><br>
-        </form>
-
-        <a href="admin_vista.php">
+        <?php
+            $row=mysqli_fetch_array($query_ini);
+                $row['id'];
+                $row['usuario'];
+                $row['contraseña'];
+                $row['rol'];
+                $row['id_admin'];
+                $row['id_paci'];
+        ?>
+                <a href="update_ini_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
+                <br><br>
+                
+            <a href="admin_vista.php">
             <input type="submit" class="btn_cancelar" value="Cancelar"></a><br><br>
 
     </div>
