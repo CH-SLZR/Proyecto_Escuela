@@ -23,7 +23,6 @@ include('../CRUD/read.php');
 	        $insercion = mysqli_query ($conn,$sqlinsert);
 
 	        if($insercion == 1){
-				//echo "<script> alert('Registro realizado con exito.')";
 				//lee el campo id de la tabla "pacientes"
 				$sql="SELECT id FROM pacientes where '$name'=nombre";
 				$query=mysqli_query($conn,$sql);
@@ -35,10 +34,7 @@ include('../CRUD/read.php');
 	
 					$insercion2 = mysqli_query ($conn,$sqlinsert);
 					//echo "exito al insertar";
-	        }else {
-				echo "<script> alert('Intento de registro fallido. ')";
-				//echo "Error: ".$sql."<br>".mysql_error($conn);
-			}
+	        }
 
         }elseif ($rol == "Administrador"){
 	        $sqlinsert = "INSERT INTO administradores (nombre, apellido_paterno, apellido_materno, email, telefono)
@@ -46,11 +42,16 @@ include('../CRUD/read.php');
             $insercion = mysqli_query ($conn,$sqlinsert);
 
 	            if($insercion == 1){
-		            $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_admin)
-			        VALUES ('$user', '$pass', '$rol', '$id_admin')";
+		            $sql="SELECT id FROM administradores where '$name'=nombre";
+					$query=mysqli_query($conn,$sql);
+					$row=mysqli_fetch_array($query);
+					$id_admin = $row['id'];
 
-		            $insercion2 = mysqli_query ($conn,$sqlinsert);
-		            //echo "exito al insertar";
+						$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_admin, id_paci)
+						VALUES ('$user', '$pass', '$rol', '$id_admin', '')";
+	
+						$insercion2 = mysqli_query ($conn,$sqlinsert);
+						//echo "exito al insertar";
 	            }
 	
         } 
