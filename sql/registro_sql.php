@@ -1,5 +1,6 @@
 <?php
 include('conexion.php');
+include('../CRUD/read.php');
 
         $name = $_POST["name"];
         $ape_p = $_POST["ape_pat"];
@@ -10,14 +11,18 @@ include('conexion.php');
         $pass = $_POST["contra"];
         $rol = $_POST["rol"];
 
+		$row=mysqli_fetch_array($query_ini);
+			$id_admin = $row["id_admin"];
+			$id_paci = $row["id_paci"];
+
         if ($rol == "Paciente"){
 	        $sqlinsert = "INSERT INTO pacientes (nombre, apellido_paterno, apellido_materno, email, telefono)
 	        VALUES ('$name', '$ape_p', '$ape_m', '$email', '$tel')";
 	        $insercion = mysqli_query ($conn,$sqlinsert);
 
 	        if($insercion == 1){
-		        $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
-			    VALUES ('$user', '$pass', '$rol')";
+		        $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_paci)
+			    VALUES ('$user', '$pass', '$rol', '$id_paci')";
 
 		        $insercion2 = mysqli_query ($conn,$sqlinsert);
 		        //echo "exito al insertar";
@@ -29,8 +34,8 @@ include('conexion.php');
             $insercion = mysqli_query ($conn,$sqlinsert);
 
 	            if($insercion == 1){
-		            $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol)
-			        VALUES ('$user', '$pass', '$rol')";
+		            $sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_admin)
+			        VALUES ('$user', '$pass', '$rol', '$id_admin')";
 
 		            $insercion2 = mysqli_query ($conn,$sqlinsert);
 		            //echo "exito al insertar";
