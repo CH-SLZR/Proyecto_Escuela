@@ -53,11 +53,23 @@
             <br><br>
 
             <input type="submit" class="btn_actualizar" value="Actualizar"><br><br>
+        </form>
+
+        <!-- boton de editar usuario -->
+        <?php
+            $row=mysqli_fetch_array($query_ini);
+                $row['id'];
+                $row['usuario'];
+                $row['contraseña'];
+                $row['rol'];
+                $row['id_admin'];
+                $row['id_paci'];
+        ?>
+                <a href="update_ini_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
+                <br><br>
 
             <a href="../vistas/admin_vista.php">
             <input type="submit" class="btn_cancelar" value="Cancelar"></a>
-        </form>
-
     </div>
 </body>
 </html>

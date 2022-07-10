@@ -52,7 +52,7 @@
             <input type="submit" class="btn_actualizar" value="Actualizar"> <br><br>
         </form>
 
-        <!-- inicia segundo form para el boton de editar usuario -->
+        <!-- boton de editar usuario -->
         <?php
             $row=mysqli_fetch_array($query_ini);
                 $row['id'];
