@@ -25,15 +25,13 @@
 
 <body>
     <div class="container mt-5">
-        <form action="update_admin.php" method="POST">
+        <form action="../sql/update_admin_sql.php" method="POST">
 
             <h5>ID:</h5>
-            <input type="text" placeholder="ID" name="id" 
-                value="<?php echo $row['id'] ?>" readonly="readonly">
+            <input type="text" placeholder="ID" name="id" value="<?php echo $row['id'] ?>" readonly="readonly">
 
             <h5>Nombre:</h5>
-            <input type="text" placeholder="Nombre(s)" name="name" 
-                value="<?php echo $row['nombre'] ?>" required />
+            <input type="text" placeholder="Nombre(s)" name="name" value="<?php echo $row['nombre'] ?>" required />
 
             <h5>Apellido Paterno:</h5>
             <input type="text" placeholder="Apellido Paterno" name="ape_pat"
@@ -44,24 +42,45 @@
                 value="<?php echo $row['apellido_materno'] ?>" required />
 
             <h5>Correo electronico:</h5>
-            <input type="text" placeholder="Correo electronico" name="email" 
-                value="<?php echo $row['email'] ?>" required />
+            <input type="text" placeholder="Correo electronico" name="email" value="<?php echo $row['email'] ?>"
+                required />
 
             <h5>Telefono:</h5>
-            <input type="text" placeholder="Telefono" name="tel" 
-                value="<?php echo $row['telefono'] ?>" required />
+            <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
             <br><br>
 
-            <input type="submit" class="btn_actualizar" value="Actualizar"><br><br>
-
+            <input type="submit" class="btn_actualizar" value="Actualizar">
         </form>
 
-        <a href="edit_ini_vista.php">
-        <input type="submit" class="btn_editar" value="Editar Usuario"></a><br><br>
-            
-        <a href="../vistas/admin_vista.php">
-        <input type="submit" class="btn_cancelar" value="Cancelar"></a><br><br>
+        <!-- inicia segundo form para el boton de editar usuario -->
+        <form action="update_ini_vista.php" method="POST">
+
+            <input type="hidden" placeholder="ID" name="id" 
+                value="<?php echo $row['id'] ?>" readonly="readonly">
+
+            <input type="hidden" placeholder="Nombre(s)" name="name" 
+                value="<?php echo $row['nombre'] ?>" required />
+
+            <input type="hidden" placeholder="Apellido Paterno" name="ape_pat"
+                value="<?php echo $row['apellido_paterno'] ?>" required />
+
+            <input type="hidden" placeholder="Apellido Materno" name="ape_mat"
+                value="<?php echo $row['apellido_materno'] ?>" required />
+
+            <input type="hidden" placeholder="Correo electronico" name="email" 
+                value="<?php echo $row['email'] ?>" required />
+
+            <input type="hidden" placeholder="Telefono" name="tel" 
+                value="<?php echo $row['telefono'] ?>" required />
+            <br>
+
+            <input type="submit" class="btn_actualizar" value="Editar Usuario"><br><br>
+        </form>
+
+        <a href="admin_vista.php">
+            <input type="submit" class="btn_cancelar" value="Cancelar"></a><br><br>
 
     </div>
 </body>
+
 </html>
