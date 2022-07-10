@@ -91,7 +91,7 @@
                         <th><?php  echo $row['email']?></th>
                         <th><?php  echo $row['telefono']?></th>
 
-                        <th><a href="edit_admin_vista?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="edit_admin_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete_admin.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
@@ -133,7 +133,7 @@
                         <th><?php  echo $row['email']?></th>
                         <th><?php  echo $row['telefono']?></th>
 
-                        <th><a href="../CRUD/edit_paci.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="edit_paci_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete_paci.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
@@ -175,7 +175,7 @@
                         <th><?php  echo $row['id_admin']?></th>
                         <th><?php  echo $row['id_paci']?></th>
 
-                        <th><a href="../CRUD/edit_ini.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="edit_ini_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete_ini.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>

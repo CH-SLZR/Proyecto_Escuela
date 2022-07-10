@@ -1,6 +1,6 @@
 <?php 
     include("../sql/conexion.php");
-    include("read.php");
+    include("../CRUD/read.php");
 
     $id=$_GET['id'];
 
