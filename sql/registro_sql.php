@@ -23,9 +23,9 @@ include('../CRUD/read.php');
 	        $insercion = mysqli_query ($conn,$sqlinsert);
 
 	        if($insercion == 1){
-				echo "<script> alert('Registro realizado con exito.')";
+				//echo "<script> alert('Registro realizado con exito.')";
 				//lee el campo id de la tabla "pacientes"
-				$sql="SELECT id FROM pacientes";
+				$sql="SELECT id FROM pacientes where '$name'=nombre";
 				$query=mysqli_query($conn,$sql);
 				$row=mysqli_fetch_array($query);
 				$id_paci = $row['id'];
