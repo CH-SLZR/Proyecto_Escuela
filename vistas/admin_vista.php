@@ -91,7 +91,7 @@
                         <th><?php  echo $row['email']?></th>
                         <th><?php  echo $row['telefono']?></th>
 
-                        <th><a href="../CRUD/edit_admin.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                        <th><a href="edit_admin_vista?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                         <th><a href="../CRUD/delete_admin.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>

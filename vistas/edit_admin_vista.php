@@ -54,6 +54,9 @@
 
             <input type="submit" class="btn_actualizar" value="Actualizar"><br><br>
 
+            <a href="edit_ini_vista">
+            <input type="submit" class="btn_editar" value="Editar Usuario"></a><br><br>
+            
             <a href="../vistas/admin_vista.php">
             <input type="submit" class="btn_cancelar" value="Cancelar"></a><br><br>
         </form>
