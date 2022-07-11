@@ -68,7 +68,7 @@
                 <a href="update_ini_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
                 <br><br>
 
-            <a href="../vistas/admin_vista.php">
+            <a href="admin_vista.php">
             <input type="submit" class="btn_cancelar" value="Cancelar"></a>
     </div>
 </body>

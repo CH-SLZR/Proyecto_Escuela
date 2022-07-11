@@ -92,7 +92,7 @@
                         <th><?php  echo $row['telefono']?></th>
 
                         <th><a href="update_admin_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete_admin.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        <th><a href="../sql/delete_admin_sql.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
                     <?php 
@@ -134,7 +134,7 @@
                         <th><?php  echo $row['telefono']?></th>
 
                         <th><a href="update_paci_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete_paci.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        <th><a href="../sql/delete_paci_sql.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
                     <?php 
@@ -176,7 +176,7 @@
                         <th><?php  echo $row['id_paci']?></th>
 
                         <th><a href="update_ini_vista.php?id=<?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                        <th><a href="../CRUD/delete_ini.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
+                        <th><a href="../sql/delete_ini_sql.php?id=<?php echo $row['id'] ?>" class="btn_delete">Eliminar</a>
                         </th>
                     </tr>
                     <?php 
