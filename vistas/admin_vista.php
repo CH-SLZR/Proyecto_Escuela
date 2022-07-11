@@ -1,6 +1,6 @@
 <?php 
     include("../sql/conexion.php");
-    include("../CRUD/read.php");
+    include("../sql/read.php");
 ?>
 
 <!DOCTYPE html>

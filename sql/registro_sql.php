@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-include('../CRUD/read.php');
+include('read.php');
 
         $name = $_POST["name"];
         $ape_p = $_POST["ape_pat"];
