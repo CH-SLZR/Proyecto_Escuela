@@ -25,7 +25,7 @@
 
 <body>
     <div class="container mt-5">
-        <form action="update_paci.php" method="POST">
+        <form action="../sql/update_paci_sql.php" method="POST">
 
             <h5>ID:</h5>
             <input type="text" placeholder="ID" name="id" 
