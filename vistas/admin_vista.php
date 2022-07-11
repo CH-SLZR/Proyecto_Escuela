@@ -165,7 +165,7 @@
 
                 <tbody>
                     <?php
-                                         while($row=mysqli_fetch_array($query_ini)){
+                            while($row=mysqli_fetch_array($query_ini)){
                         ?>
                     <tr>
                         <th><?php  echo $row['id']?></th>
@@ -180,7 +180,7 @@
                         </th>
                     </tr>
                     <?php 
-                                            }
+                                }
                                         ?>
                 </tbody>
             </table>
