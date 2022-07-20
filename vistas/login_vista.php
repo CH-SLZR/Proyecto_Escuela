@@ -12,12 +12,14 @@
 <body>
     <div class="con">
         <div class="box">
-            <h1>Login Form</h1>
+            <h1>Inicio se sesión</h1>
             <form action="../sql/login_sql.php" method="post" class="login-form">
-                <input type="text" name="user" placeholder="Ingresa el usuario" required><br>
-                <input type="Password" name="contra" placeholder="Enter Password" required><br>
+                <input type="text" name="user" placeholder="Usuario" required><br>
+
+                <input type="Password" name="contra" placeholder="Contraseña" required><br>
+
                 <!-- <input type="button" name="btn" value="Login " class="btn"> -->
-                <button type="submit" class="btn" name="entrar">Entrar</button>
+                <button type="submit" class="btn" name="entrar">Ingresar</button>
             </form>
         </div>
     </div>
