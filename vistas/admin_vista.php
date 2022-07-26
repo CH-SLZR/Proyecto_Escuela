@@ -17,7 +17,7 @@ include("../sql/read.php");
         <div class="hijo1">
             <h1>Registro de Usuarios</h1>
 
-            <form action="../sql/registro_sql.php" method="post">
+            <form action="../sql/registro_sql.php" method="post" class="admin-form">
                 <h5>Nombre:</h5>
                 <input type="text" placeholder="Nombre(s)" name="name" required />
 
@@ -47,9 +47,15 @@ include("../sql/read.php");
                 </select>
                 <br> <br>
 
-                <button type="submit" class="btn" name="registrar">Registrar</button>
-                <br><br>
-                <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
+                <div class="botones">
+                    <div class="btnreg">
+                        <button type="submit" class="btn" name="registrar">Registrar</button>
+                    </div>
+
+                    <div class="btndlt">
+                        <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
+                    </div>
+                </div>
             </form>
         </div>
 
