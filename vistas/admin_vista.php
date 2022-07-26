@@ -14,7 +14,7 @@ include("../sql/read.php");
 
 <body>
     <div class="padre">
-    <div class="hijo1">
+        <div class="hijo1">
             <h1>Registro de Usuarios</h1>
 
             <form action="../sql/registro_sql.php" method="post">
@@ -51,140 +51,139 @@ include("../sql/read.php");
                 <br><br>
                 <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
             </form>
-            </div>
+        </div>
 
-            <!-- inician tablas -->
-            <div class="hijo2">
-                <h1>Tablas de Datos</h1>
+        <!-- inician tablas -->
+        <div class="hijo2">
+            <h1>Tablas de Datos</h1>
 
-                <!-- empieza tabla administradores -->
-                <h2>Tablas de Administradores</h2>
+            <!-- empieza tabla administradores -->
+            <h2>Tablas de Administradores</h2>
 
-                <div class="tabla_admins">
-                    <table name="table_admins">
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>nombre</th>
-                                <th>apellido paterno</th>
-                                <th>apellido mateno</th>
-                                <th>email</th>
-                                <th>telefono</th>
-                            </tr>
-                        </thead>
+            <div class="tabla_admins">
+                <table name="table_admins">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>nombre</th>
+                            <th>apellido paterno</th>
+                            <th>apellido mateno</th>
+                            <th>email</th>
+                            <th>telefono</th>
+                        </tr>
+                    </thead>
 
-                        <tbody>
-                            <?php
+                    <tbody>
+                        <?php
                     while ($row = mysqli_fetch_array($query_admin)) {
                     ?>
-                            <tr>
-                                <th><?php echo $row['id'] ?></th>
-                                <th><?php echo $row['nombre'] ?></th>
-                                <th><?php echo $row['apellido_paterno'] ?></th>
-                                <th><?php echo $row['apellido_materno'] ?></th>
-                                <th><?php echo $row['email'] ?></th>
-                                <th><?php echo $row['telefono'] ?></th>
+                        <tr>
+                            <th><?php echo $row['id'] ?></th>
+                            <th><?php echo $row['nombre'] ?></th>
+                            <th><?php echo $row['apellido_paterno'] ?></th>
+                            <th><?php echo $row['apellido_materno'] ?></th>
+                            <th><?php echo $row['email'] ?></th>
+                            <th><?php echo $row['telefono'] ?></th>
 
-                                <th><a href="update_admin_vista.php?id=<?php echo $row['id'] ?>"
-                                        class="btn_table">Editar</a>
-                                </th>
+                            <th><a href="update_admin_vista.php?id=<?php echo $row['id'] ?>"
+                                    class="btn_table">Editar</a>
+                            </th>
 
-                                <th><a href="../sql/delete_admin_sql.php?id=<?php echo $row['id'] ?>"
-                                        class="btn_table">Eliminar</a>
-                                </th>
-                            </tr>
-                            <?php
+                            <th><a href="../sql/delete_admin_sql.php?id=<?php echo $row['id'] ?>"
+                                    class="btn_table">Eliminar</a>
+                            </th>
+                        </tr>
+                        <?php
                     }
                     ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- termina tabla administradores -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- termina tabla administradores -->
 
-                <!-- empieza tabla pacientes -->
-                <h2>Tablas de Pacientes</h2>
+            <!-- empieza tabla pacientes -->
+            <h2>Tablas de Pacientes</h2>
 
-                <div class="tabla_pacientes">
-                    <table name="table_paci">
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>nombre</th>
-                                <th>apellido paterno</th>
-                                <th>apellido mateno</th>
-                                <th>email</th>
-                                <th>telefono</th>
-                            </tr>
-                        </thead>
+            <div class="tabla_pacientes">
+                <table name="table_paci">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>nombre</th>
+                            <th>apellido paterno</th>
+                            <th>apellido mateno</th>
+                            <th>email</th>
+                            <th>telefono</th>
+                        </tr>
+                    </thead>
 
-                        <tbody>
-                            <?php
+                    <tbody>
+                        <?php
                     while ($row = mysqli_fetch_array($query_paci)) {
                     ?>
-                            <tr>
-                                <th><?php echo $row['id'] ?></th>
-                                <th><?php echo $row['nombre'] ?></th>
-                                <th><?php echo $row['apellido_paterno'] ?></th>
-                                <th><?php echo $row['apellido_materno'] ?></th>
-                                <th><?php echo $row['email'] ?></th>
-                                <th><?php echo $row['telefono'] ?></th>
+                        <tr>
+                            <th><?php echo $row['id'] ?></th>
+                            <th><?php echo $row['nombre'] ?></th>
+                            <th><?php echo $row['apellido_paterno'] ?></th>
+                            <th><?php echo $row['apellido_materno'] ?></th>
+                            <th><?php echo $row['email'] ?></th>
+                            <th><?php echo $row['telefono'] ?></th>
 
-                                <th><a href="update_paci_vista.php?id=<?php echo $row['id'] ?>"
-                                        class="btn_table">Editar</a>
-                                </th>
+                            <th><a href="update_paci_vista.php?id=<?php echo $row['id'] ?>" class="btn_table">Editar</a>
+                            </th>
 
-                                <th><a href="../sql/delete_paci_sql.php?id=<?php echo $row['id'] ?>"
-                                        class="btn_table">Eliminar</a>
-                                </th>
-                            </tr>
-                            <?php
+                            <th><a href="../sql/delete_paci_sql.php?id=<?php echo $row['id'] ?>"
+                                    class="btn_table">Eliminar</a>
+                            </th>
+                        </tr>
+                        <?php
                     }
                     ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- termina tabla pacientes -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- termina tabla pacientes -->
 
-                <!-- empieza tabla inicio -->
-                <h2>Tablas de Usuarios</h2>
+            <!-- empieza tabla inicio -->
+            <h2>Tablas de Usuarios</h2>
 
-                <div class="tabla_inicio">
-                    <table name="table_inicio">
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>usuario</th>
-                                <th>contraseña</th>
-                                <th>rol</th>
-                                <th>id_admin</th>
-                                <th>id_paciente</th>
-                            </tr>
-                        </thead>
+            <div class="tabla_inicio">
+                <table name="table_inicio">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>usuario</th>
+                            <th>contraseña</th>
+                            <th>rol</th>
+                            <th>id_admin</th>
+                            <th>id_paciente</th>
+                        </tr>
+                    </thead>
 
-                        <tbody>
-                            <?php
+                    <tbody>
+                        <?php
                     while ($row = mysqli_fetch_array($query_ini)) {
                     ?>
-                            <tr>
-                                <th><?php echo $row['id'] ?></th>
-                                <th><?php echo $row['usuario'] ?></th>
-                                <th><?php echo $row['contraseña'] ?></th>
-                                <th><?php echo $row['rol'] ?></th>
-                                <th><?php echo $row['id_admin'] ?></th>
-                                <th><?php echo $row['id_paci'] ?></th>
+                        <tr>
+                            <th><?php echo $row['id'] ?></th>
+                            <th><?php echo $row['usuario'] ?></th>
+                            <th><?php echo $row['contraseña'] ?></th>
+                            <th><?php echo $row['rol'] ?></th>
+                            <th><?php echo $row['id_admin'] ?></th>
+                            <th><?php echo $row['id_paci'] ?></th>
 
-                                <!-- <th><a href="update_ini_vista.php?id=<//?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
+                            <!-- <th><a href="update_ini_vista.php?id=<//?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
                             <th><a href="../sql/delete_ini_sql.php?id=<//?php echo $row['id'] ?>" class="btn_delete">Eliminar</a> -->
-                                </th>
-                            </tr>
-                            <?php
+                            </th>
+                        </tr>
+                        <?php
                     }
                     ?>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- termina tabla inicio -->
+                    </tbody>
+                </table>
             </div>
+            <!-- termina tabla inicio -->
+        </div>
     </div>
 </body>
 
