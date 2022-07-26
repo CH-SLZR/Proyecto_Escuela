@@ -3,6 +3,26 @@ body{
     background: #fff;
     font-family: arial;
 }
+
+h1{
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 60px;
+    margin-left: 160px;
+    color: coral;
+    margin-bottom: 30px;
+
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 60px;
+    margin-left: 60px;
+    color: coral;
+    margin-bottom: 20px;
+}
+
 .con{
   margin-top:150px;
     width:670px;
@@ -32,29 +52,13 @@ box-shadow: 0px 4px 62px -36px rgba(36,36,36,0.85);
 
     border-bottom-left-radius: 250px;
     border-top-right-radius: 250px;
-
-
 }
-h1{
-    font-size: 35px;
-    font-weight: bold;
-    padding-top: 60px;
-    margin-left: 160px;
-    color: coral;
-    margin-bottom: 30px;
 
-}
-h2{
-    font-size: 14px;
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: -150px;
-color:#ccc;
-  
-}
 spain{
   color:#ccc;
 }
+
 .res{
     width:400px;
     height: 20px;
@@ -68,6 +72,7 @@ spain{
     margin-left: auto;
     margin-right: auto;
 }
+
 input{
     width: 280px;
     height: 15px;
@@ -81,6 +86,7 @@ input{
 coral;
     outline: none;
 }
+
 .btn{
     width: 100px;
     height: 40px;
@@ -91,10 +97,27 @@ border-radius:50px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
+
 .btn:hover{
     background: #fff;
     color: coral;
     border:1.5px solid coral;
     transition: .5s;
     cursor: pointer;
+}
+
+.padre_admin{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline
+}
+
+.hijo_registro{
+
+}
+
+.hijo_tablas{
+
+align-content: center;
 }
