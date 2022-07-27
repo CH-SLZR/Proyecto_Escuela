@@ -10,7 +10,8 @@
 <body>
     <div class="login">
         <div class="login-form">
-            <h2>Ingresa tus datos</h2>
+
+            <h1 style="text-align: center;">Ingresa tus datos</h1>
 
             <h4>Peso:</h4>
             <input type="text" placeholder="peso" name="peso" /><br>
@@ -28,9 +29,13 @@
             <input type="text" placeholder="latidos por minuto" name="lat_min" /><br>
 
             <div class="botones">
-            <button type="submit" class="btn">Obtener Rutina</button>
-            <br>
-            <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
+                <div class="btnreg">
+                    <button type="submit" class="btn">Obtener Rutina</button>
+                </div>
+
+                <div class="btndlt">
+                    <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
+                </div>
             </div>
         </div>
     </div>
