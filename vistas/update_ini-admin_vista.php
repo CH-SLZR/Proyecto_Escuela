@@ -4,7 +4,7 @@
 
     $id=$_GET['id'];
 
-    $sql="SELECT * FROM inicio WHERE id_admin='$id'";
+    $sql="SELECT * FROM inicio WHERE id='$id'";
     $query=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($query);
 ?>

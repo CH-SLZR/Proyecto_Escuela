@@ -179,8 +179,7 @@ include("../sql/read.php");
                             <td><?php echo $row['id_paci'] ?></td>
 
                             <!-- <th><a href="update_ini_vista.php?id=<//?php echo $row['id'] ?>" class="btn_edit">Editar</a></th>
-                            <th><a href="../sql/delete_ini_sql.php?id=<//?php echo $row['id'] ?>" class="btn_delete">Eliminar</a> -->
-                            </th>
+                            <th><a href="../sql/delete_ini_sql.php?id=<//?php echo $row['id'] ?>" class="btn_delete">Eliminar</a></th> -->
                         </tr>
                         <?php
                     }
