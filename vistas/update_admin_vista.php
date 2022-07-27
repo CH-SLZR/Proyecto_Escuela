@@ -61,7 +61,7 @@
                 $row['id_admin'];
                 $row['id_paci'];
         ?>
-                <a href="update_ini_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
+                <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
                 <br><br>
                 
             <a href="admin_vista.php">
