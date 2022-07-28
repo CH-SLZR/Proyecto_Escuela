@@ -24,6 +24,7 @@
 
 <body>
     <div class="general-form">
+        <h1>Editar datos del paciente</h1>
         <form action="../sql/update_paci_sql.php" method="POST">
 
             <h5>ID:</h5>

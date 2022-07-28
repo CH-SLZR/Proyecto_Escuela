@@ -23,6 +23,7 @@
 
 <body>
     <div class="general-form">
+        <h1>Editar datos del administrador</h1>
         <form action="../sql/update_admin_sql.php" method="POST">
 
             <h5>ID:</h5>
