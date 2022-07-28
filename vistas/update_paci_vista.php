@@ -18,8 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>Actualizar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
@@ -57,16 +56,18 @@
 
         <!-- boton de editar usuario -->
         <?php
-            $row=mysqli_fetch_array($query_ini);
-                $row['id'];
-                $row['usuario'];
-                $row['contraseña'];
-                $row['rol'];
-                $row['id_admin'];
-                $row['id_paci'];
-        ?>
-                <a href="update_ini_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit" value="Editar Usuario"></a>
-                <br><br>
+        while ($row = mysqli_fetch_array($query_paci)) {
+        $row['id'];
+        /*$row['nombre'];
+        $row['apellido_paterno'];
+        $row['apellido_materno'];
+        $row['email'];
+        $row['telefono'];*/
+    ?>
+    <a href="update_ini-paci_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
+    <?php
+        }
+    ?>
 
             <a href="admin_vista.php">
             <input type="submit" class="btn_cancelar" value="Cancelar"></a>
