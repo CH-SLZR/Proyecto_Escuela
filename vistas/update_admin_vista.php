@@ -61,7 +61,7 @@
             $row['email'];
             $row['telefono'];*/
         ?>
-        <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>" class="btn" type="button">Editar Usuario</a>
+        <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
         <?php
             }
         ?>
