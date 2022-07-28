@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="geneal-form">
+    <div class="general-form">
         <h1>Editar usuario del paciente</h1>
         <form action="../sql/update_ini_sql.php" method="POST">
 
