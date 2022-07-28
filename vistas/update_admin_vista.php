@@ -18,12 +18,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>Actualizar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="general-form">
         <form action="../sql/update_admin_sql.php" method="POST">
 
             <h5>ID:</h5>
@@ -50,26 +49,25 @@
 
             <input type="submit" class="btn_actualizar" value="Actualizar"> <br><br>
         </form>
-
-        <!-- boton de editar usuario -->
-        <?php
-            while ($row = mysqli_fetch_array($query_ini)) {
-             $row['id'];
-             $row['usuario'];
-             $row['contraseña'];
-             $row['rol'];
-             $row['id_admin'];
-             $row['id_paci'];
-            }
-        ?>
-        <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>"><input type="submit" class="btn_edit"
-                value="Editar Usuario"></a>
-        <br><br>
-
-        <a href="admin_vista.php">
-            <input type="submit" class="btn_cancelar" value="Cancelar"></a><br><br>
-
     </div>
+
+    <!-- boton de editar usuario -->
+    <?php
+        while ($row = mysqli_fetch_array($query_admin)) {
+        $row['id'];
+        /*$row['nombre'];
+        $row['apellido_paterno'];
+        $row['apellido_materno'];
+        $row['email'];
+        $row['telefono'];*/
+    ?>
+    <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
+    <?php
+        }
+    ?>
+
+    <a href="admin_vista.php"><input type="submit" class="btn" value="Cancelar"></a>
+
 </body>
 
 </html>
