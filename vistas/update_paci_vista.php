@@ -23,16 +23,14 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="general-form">
         <form action="../sql/update_paci_sql.php" method="POST">
 
             <h5>ID:</h5>
-            <input type="text" placeholder="ID" name="id" 
-                value="<?php echo $row['id'] ?>" readonly="readonly">
+            <input type="text" placeholder="ID" name="id" value="<?php echo $row['id'] ?>" readonly="readonly">
 
             <h5>Nombre:</h5>
-            <input type="text" placeholder="Nombre(s)" name="name" 
-                value="<?php echo $row['nombre'] ?>" required />
+            <input type="text" placeholder="Nombre(s)" name="name" value="<?php echo $row['nombre'] ?>" required />
 
             <h5>Apellido Paterno:</h5>
             <input type="text" placeholder="Apellido Paterno" name="ape_pat"
@@ -43,19 +41,19 @@
                 value="<?php echo $row['apellido_materno'] ?>" required />
 
             <h5>Correo electronico:</h5>
-            <input type="text" placeholder="Correo electronico" name="email" 
-                value="<?php echo $row['email'] ?>" required />
+            <input type="text" placeholder="Correo electronico" name="email" value="<?php echo $row['email'] ?>"
+                required />
 
             <h5>Telefono:</h5>
-            <input type="text" placeholder="Telefono" name="tel" 
-                value="<?php echo $row['telefono'] ?>" required />
+            <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
             <br><br>
 
             <input type="submit" class="btn" value="Actualizar"><br><br>
         </form>
+    </div>
 
-        <!-- boton de editar usuario -->
-        <?php
+    <!-- boton de editar usuario -->
+    <?php
         while ($row = mysqli_fetch_array($query_paci)) {
         $row['id'];
         /*$row['nombre'];
@@ -69,8 +67,8 @@
         }
     ?>
 
-            <a href="admin_vista.php">
-            <input type="submit" class="btn" value="Cancelar"></a>
-    </div>
+    <a href="admin_vista.php">
+        <input type="submit" class="btn" value="Cancelar"></a>
 </body>
+
 </html>
