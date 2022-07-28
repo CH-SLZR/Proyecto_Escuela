@@ -50,10 +50,10 @@
 
             <input type="submit" class="btn_actualizar" value="Actualizar"> <br><br>
         </form>
-    </div>
 
-    <!-- boton de editar usuario -->
-    <?php
+
+        <!-- boton de editar usuario -->
+        <?php
         while ($row = mysqli_fetch_array($query_admin)) {
         $row['id'];
         /*$row['nombre'];
@@ -62,13 +62,13 @@
         $row['email'];
         $row['telefono'];*/
     ?>
-    <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
-    <?php
+        <a href="update_ini-admin_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
+        <?php
         }
     ?>
 
-    <a href="admin_vista.php"><input type="submit" class="btn" value="Cancelar"></a>
-
+        <a href="admin_vista.php"><input type="submit" class="btn" value="Cancelar"></a>
+    </div>
 </body>
 
 </html>
