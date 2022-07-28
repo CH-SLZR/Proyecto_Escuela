@@ -48,7 +48,7 @@
             <input type="text" placeholder="Telefono" name="tel" value="<?php echo $row['telefono'] ?>" required />
             <br><br>
 
-            <input type="submit" class="btn_actualizar" value="Actualizar"> <br><br>
+            <input type="submit" class="btn" value="Actualizar"> <br><br>
         </form>
 
 
