@@ -51,7 +51,7 @@
                 value="<?php echo $row['telefono'] ?>" required />
             <br><br>
 
-            <input type="submit" class="btn_actualizar" value="Actualizar"><br><br>
+            <input type="submit" class="btn" value="Actualizar"><br><br>
         </form>
 
         <!-- boton de editar usuario -->
@@ -70,7 +70,7 @@
     ?>
 
             <a href="admin_vista.php">
-            <input type="submit" class="btn_cancelar" value="Cancelar"></a>
+            <input type="submit" class="btn" value="Cancelar"></a>
     </div>
 </body>
 </html>
