@@ -41,8 +41,7 @@
 
             <input type="submit" class="btn" value="Actualizar"><br><br>
 
-            <a href="../vistas/admin_vista.php">
-                <input type="submit" class="btn" value="Cancelar"></a>
+            <a href="admin_vista.php"><button class="btn" type="button">Cancelar</button></a>
         </form>
     </div>
 </body>

@@ -36,14 +36,20 @@
             <input type="text" placeholder="Contraseña" name="contra" value="<?php echo $row['contraseña'] ?>"
                 required /> <br><br>
 
-            <?php  echo $row['rol']?>
-            <br><br>
+            <?php  echo $row['rol']?><br><br>
 
-            <input type="submit" class="btn" value="Actualizar"><br><br>
 
-            <a href="../vistas/admin_vista.php">
-                <input type="submit" class="btn" value="Cancelar"></a>
+            <div class="botones">
+                <div class="btnreg">
+                    <input type="submit" class="btn" value="Actualizar">
+                </div>
+
+                <div class="btndlt">
+                    <a href="admin_vista.php"><button class="btn" type="button">Cancelar</button></a>
+                </div>
+            </div>
         </form>
     </div>
 </body>
+
 </html>
