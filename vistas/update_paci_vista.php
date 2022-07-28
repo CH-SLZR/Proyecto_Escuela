@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    <title>Actualizar</title>
+    <title>Actualizar Paciente</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
@@ -55,18 +55,18 @@
 
         <!-- boton de editar usuario -->
         <?php
-        while ($row = mysqli_fetch_array($query_paci)) {
-        $row['id'];
-        /*$row['nombre'];
-        $row['apellido_paterno'];
-        $row['apellido_materno'];
-        $row['email'];
-        $row['telefono'];*/
-    ?>
+            while ($row = mysqli_fetch_array($query_paci)) {
+            $row['id'];
+            /*$row['nombre'];
+            $row['apellido_paterno'];
+            $row['apellido_materno'];
+            $row['email'];
+            $row['telefono'];*/
+        ?>
         <a href="update_ini-paci_vista.php?id=<?php echo $row['id'] ?>" class="btn">Editar Usuario</a>
         <?php
-        }
-    ?>
+            }
+        ?>
 
         <a href="admin_vista.php">
             <input type="submit" class="btn" value="Cancelar"></a>
