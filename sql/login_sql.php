@@ -14,7 +14,7 @@
     $filas=mysqli_fetch_array($result);
 
     if($filas['rol']=="Administrador"){
-        header("location:../vistas/admin_vista.php");
+        header("location:../index_admins.php");
 
         }elseif($filas['rol']=="Paciente"){
             header("location:../vistas/rutina_vista.php");
