@@ -48,7 +48,7 @@ include('read.php');
 					$id_admin = $row['id'];
 
 						$sqlinsert = "INSERT INTO inicio (usuario, contraseña, rol, id_admin, id_paci)
-						VALUES ('$user', '$pass', '$rol', '$id_admin', '')";
+						VALUES ('$user', '$pass', '$rol', '$id_admin', 'NULL')";
 	
 						$insercion2 = mysqli_query ($conn,$sqlinsert);
 						//echo "exito al insertar";
@@ -56,9 +56,9 @@ include('read.php');
 	
         } 
 		if($insercion2 == 1){
-	         echo "<script> alert('Usuario registrado con exito.');window.location = '../vistas/admin_vista.php' </script>";
+	         echo "<script> alert('Usuario registrado con exito.');window.location = '../vistas/registro.php' </script>";
             }else {
-	            echo "<script> alert('Usuario no registrado. ');window.location = '../vistas/admin_vista.php' </script>";
+	            echo "<script> alert('Usuario no registrado. ');window.location = '../vistas/registro.php' </script>";
 	            //echo "Error: ".$sql."<br>".mysql_error($conn);
             }
 ?>
