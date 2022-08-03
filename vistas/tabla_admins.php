@@ -7,15 +7,12 @@ include("../sql/read.php");
 <html lang="es">
 
 <head>
-    <title>Tabla de administradores</title>
-    <!-- <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'> -->
+    <title>Administradores</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-    <div class="padre">
         <div class="hijo2">
-            <!-- empieza tabla administradores -->
             <h2>Tablas de Administradores</h2>
 
             <div class="tabla_admins">
@@ -57,10 +54,7 @@ include("../sql/read.php");
                     </tbody>
                 </table>
             </div>
-            <!-- termina tabla administradores -->
-
         </div>
-    </div>
 </body>
 
 </html>

@@ -12,7 +12,9 @@
 <body>
     <div class="hijo1">
         <h1>Control para Administradores</h1>
-        <div class="general-form">
+        <div class="admins-control">
+            <a href="registro.php"><button type="submit" class="btn2" name="entrar">Registrar Usuario</button></a>
+
             <a href="tabla_admins.php"><button type="submit" class="btn2" name="entrar">Ver Administradores</button></a>
 
             <a href="tabla_pacientes.php"><button type="submit" class="btn2" name="entrar">Ver Pacientes</button></a>
