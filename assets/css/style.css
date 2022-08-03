@@ -121,10 +121,14 @@ input {
 
 .botones{
     display: flex;
-    margin-left: 20px;
+    margin-left: -50px;
 }
 
 .btndlt{
+    margin-left: 50px;
+}
+
+.btnreg{
     margin-left: 50px;
 }
 
