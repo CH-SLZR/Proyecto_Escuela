@@ -1,6 +1,6 @@
 <?php
-include("sql/conexion.php");
-include("sql/read.php");
+include("../sql/conexion.php");
+include("../sql/read.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ include("sql/read.php");
 <head>
     <title>Tabla de administradores</title>
     <!-- <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'> -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>

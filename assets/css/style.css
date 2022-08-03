@@ -138,3 +138,14 @@ input {
 .general-form{
     text-align: center;
 }
+
+.btn2 {
+    width: 150px;
+    height: 60px;
+    background: coral;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
