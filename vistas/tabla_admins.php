@@ -16,7 +16,7 @@ include("../sql/read.php");
             <h2>Tablas de Administradores</h2>
 
             <div class="tabla_admins">
-                <table name="table_admins" style="height: 130px;width: 800px;">
+                <table name="table_admins" style="text-align: center; height: 130px;width: 800px;">
                     <thead style="color: orangered;">
                         <tr>
                             <th>ID</th>

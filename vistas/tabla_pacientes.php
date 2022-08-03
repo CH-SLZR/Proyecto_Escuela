@@ -18,7 +18,7 @@ include("../sql/read.php");
             <h2>Tablas de Pacientes</h2>
 
             <div class="tabla_pacientes">
-                <table name="table_paci" style="height: 130px;width: 800px;">
+                <table name="table_paci" style= "text-align: center; height: 130px;width: 800px;">
                     <thead style="color: orangered;">
                         <tr>
                             <th>id</th>

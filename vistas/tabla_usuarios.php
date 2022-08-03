@@ -16,7 +16,7 @@ include("../sql/read.php");
             <h2>Tablas de Usuarios</h2>
 
             <div class="tabla_inicio">
-                <table name="table_inicio" style="height: 130px;width: 650px;">
+                <table name="table_inicio" style= "text-align: center; height: 130px;width: 650px;">
                     <thead style="color: orangered;">
                         <tr>
                             <th>id</th>
