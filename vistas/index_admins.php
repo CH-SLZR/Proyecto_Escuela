@@ -21,6 +21,7 @@
 
             <a href="tabla_usuarios.php"><button type="submit" class="btn2" name="entrar">Ver Usuarios</button></a>
         </div>
+        <a href="login_vista.php"><button class="btn" type="button" style="margin-top: 50px;">Cerrar Sesion</button></a>
     </div>
 </body>
 
