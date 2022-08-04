@@ -11,11 +11,18 @@ include('read.php');
 
         if ($sexo == "Mujer"){
 
-            $img = "../img/ruinas/rutina_1.jpg";
+            $img = "../img/rutinas/rutina_1.jpg";
             $dat = base64_encode(file_get_contents($img));
             $src = 'data:'.mime_content_type($img).';base64,'.$dat;
 
             echo "<img src=\"$src\">";
 
-        }
+        }elseif ($sexo == "Hombre"){
+
+            $img = "../img/rutinas/rutina_5.jpg";
+            $dat = base64_encode(file_get_contents($img));
+            $src = 'data:'.mime_content_type($img).';base64,'.$dat;
+
+            echo "<img src=\"$src\">";
+        } 
 ?>
