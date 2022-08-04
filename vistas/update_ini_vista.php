@@ -5,7 +5,7 @@
 
     $id=$_GET['id'];
 
-    $sql="SELECT * FROM inicio WHERE id_admin='$id'";
+    $sql="SELECT * FROM administradores WHERE id='$id'";
     $query=mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($query);
 ?>
@@ -17,15 +17,14 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Actualizar Usuario de Administrador</title>
+    <title>Actualizar Administrador</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style_header.css">
-
 </head>
 
 <body>
     <div class="general-form">
-        <h1>Editar usuario del administrador</h1>
+        <h1>Editar usuario</h1>
         <form action="../sql/update_ini_sql.php" method="POST">
 
             <h5>ID:</h5>
@@ -49,13 +48,16 @@
                         </div>
 
                         <div class="btndlt">
-                            <a href="index_admins.php"><button class="btn" type="button">Cancelar</button></a>
+                            <a href="index_admins.php"><button class="btn">Cancelar</button></a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </form>
+
+        <a href="tabla_admins.php"><input type="button" class="btn" value="Cancelar"></a>
+        
     </div>
 </body>
 

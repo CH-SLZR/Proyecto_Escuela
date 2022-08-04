@@ -1,0 +1,33 @@
+header{
+    background-color: beige;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 40px;
+}
+
+img{
+    width: auto;
+    height: auto;
+}
+
+li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
+
+li:hover a {
+    color: blue;
+}
+
+nav {
+    padding-top: 40px;
+    float: right;
+}
+
+a {
+    font-family: sans-serif;
+    font-size: 20;
+    text-decoration: none;
+    color: coral;
+}

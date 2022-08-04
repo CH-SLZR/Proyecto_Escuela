@@ -13,6 +13,6 @@ $sql="UPDATE pacientes SET id='$id', nombre='$name', apellido_paterno='$ape_pat'
 $query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: ../vistas/admin_vista.php");
+        Header("Location: ../vistas/tabla_pacientes.php");
     }
 ?>

@@ -1,6 +1,7 @@
 <?php 
     include("../sql/conexion.php");
     include("../sql/read.php");
+    include ("../assets/header.php");
 
     $id=$_GET['id'];
 
@@ -18,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Actualizar Paciente</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_header.css">
 
 </head>
 
@@ -67,8 +69,7 @@
             }
         ?>
 
-        <a href="admin_vista.php">
-            <input type="submit" class="btn" value="Cancelar"></a>
+        <a href="tabla_pacientes.php"><input type="submit" class="btn" value="Cancelar"></a>
     </div>
 </body>
 

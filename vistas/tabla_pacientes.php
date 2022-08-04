@@ -1,6 +1,7 @@
 <?php
 include("../sql/conexion.php");
 include("../sql/read.php");
+include ("../assets/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ include("../sql/read.php");
 <head>
     <title>Pacientes</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_header.css">
 </head>
 
 <body>
@@ -17,8 +19,8 @@ include("../sql/read.php");
         <!-- empieza tabla pacientes -->
         <h2>Tablas de Pacientes</h2>
 
-        <div class="tabla_pacientes">
-            <table name="table_paci" style="text-align: center; height: 130px;width: 800px;">
+        <div class="tabla">
+            <table border-collapse: separate; border = 1px; name="table_paci" style="text-align: center; height: 130px;width: 800px;">
                 <thead style="color: orangered;">
                     <tr>
                         <th>id</th>
@@ -54,6 +56,7 @@ include("../sql/read.php");
                 </tbody>
             </table>
 
+            <br><br>
             <a href="index_admins.php"><button class="btn" type="button">Regresar</button></a>
             
         </div>

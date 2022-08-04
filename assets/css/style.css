@@ -121,16 +121,16 @@ input {
 
 .botones{
     display: flex;
-    margin-left: -50px;
+    margin-left: 20px;
 }
 
 .btndlt{
     margin-left: 50px;
 }
 
-.btnreg{
+/* .btnreg{
     margin-left: 50px;
-}
+} */
 
 .general-form{
     text-align: center;
@@ -147,7 +147,19 @@ input {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
-.admins-control{
+.btn2:hover {
+    background: #fff;
+    color: coral;
+    border: 1.5px solid coral;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.admins-control {
     text-align: center;
     flex-direction: row;
+}
+
+.btn_table:hover{
+    color: blue;
 }

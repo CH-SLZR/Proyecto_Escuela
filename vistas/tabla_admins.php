@@ -1,6 +1,7 @@
 <?php
 include("../sql/conexion.php");
 include("../sql/read.php");
+include ("../assets/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +10,15 @@ include("../sql/read.php");
 <head>
     <title>Administradores</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_header.css">
 </head>
 
 <body>
     <div class="hijo2">
         <h2>Tablas de Administradores</h2>
 
-        <div class="tabla_admins">
-            <table name="table_admins" style="text-align: center; height: 130px;width: 800px;">
+        <div class="tabla">
+            <table border-collapse: separate; border = 1px; name="table_admins" style="text-align: center; height: 130px;width: 800px;">
                 <thead style="color: orangered;">
                     <tr>
                         <th>ID</th>
@@ -40,11 +42,9 @@ include("../sql/read.php");
                         <td><?php echo $row['email'] ?></td>
                         <td><?php echo $row['telefono'] ?></td>
 
-                        <th><a href="update_admin_vista.php?id=<?php echo $row['id'] ?>" class="btn_table">Editar</a>
-                        </th>
+                        <th><a href="update_admin_vista.php?id=<?php echo $row['id'] ?>" class="btn_table">Editar</a></th>
 
-                        <th><a href="../sql/delete_admin_sql.php?id=<?php echo $row['id'] ?>"class="btn_table">Eliminar</a>
-                        </th>
+                        <th><a href="../sql/delete_admin_sql.php?id=<?php echo $row['id'] ?>"class="btn_table">Eliminar</a></th>
                     </tr>
                     <?php
                     }
@@ -52,6 +52,7 @@ include("../sql/read.php");
                 </tbody>
             </table>
 
+            <br><br>
             <a href="index_admins.php"><button class="btn" type="button">Regresar</button></a>
             
         </div>

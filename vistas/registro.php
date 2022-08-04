@@ -1,6 +1,7 @@
 <?php
 include("../sql/conexion.php");
 include("../sql/read.php");
+include ("../assets/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ include("../sql/read.php");
 <head>
     <title>UADY - Registro de Usuarios</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_header.css">
 </head>
 
 <body>
@@ -46,17 +48,12 @@ include("../sql/read.php");
             <br> <br>
 
             <div class="botones">
-
-                <div class="btnback">
-                    <a href="index_admins.php"><button class="btn" type="button">Regresar</button></a>
-                </div>
-
                 <div class="btnreg">
                     <button type="submit" class="btn" name="registrar">Registrar</button>
                 </div>
 
                 <div class="btndlt">
-                    <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
+                    <a href="index_admins.php"><button class="btn" type="button">Regresar</button></a>
                 </div>
             </div>
         </form>

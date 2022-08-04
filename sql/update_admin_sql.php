@@ -13,6 +13,6 @@ $sql="UPDATE administradores SET id='$id', nombre='$name', apellido_paterno='$ap
 $query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: ../vistas/admin_vista.php");
+        Header("Location: ../vistas/tabla_admins.php");
     }
 ?>

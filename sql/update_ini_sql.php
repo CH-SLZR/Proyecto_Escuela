@@ -11,6 +11,6 @@ $sql="UPDATE inicio SET id='$id', usuario='$user', contraseña='$pass' WHERE id=
 $query=mysqli_query($conn,$sql);
 
     if($query){
-        Header("Location: ../vistas/admin_vista.php");
+        Header("Location: ../vistas/tabla_usuarios.php");
     }
 ?>

@@ -8,11 +8,14 @@
 </head>
 
 <body>
-    <div class="login">
-        <div class="login-form">
+    <div class="hijo1">
+        <div class="admin-form">
 
             <h1 style="text-align: center;">Ingresa tus datos</h1>
 
+            <h4>Sexo:</h4>
+            <input type="text" placeholder="Hombre/Mujer" name="sexo" /><br>
+            
             <h4>Peso:</h4>
             <input type="text" placeholder="peso" name="peso" /><br>
 

@@ -11,6 +11,6 @@ $sql1="DELETE FROM administradores WHERE id='$id'";
 $query1=mysqli_query($conn,$sql1);
 
     if($query1){
-        Header("Location: ../vistas/admin_vista.php");
+        Header("Location: ../vistas/index_admins.php");
     }
 ?>
