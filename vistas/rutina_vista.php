@@ -9,18 +9,15 @@
 
 <body>
     <div class="hijo1">
-        <div class="admin-form">
+        <h1 style="text-align: center;">Ingresa tus datos</h1>
 
-            <h1 style="text-align: center;">Ingresa tus datos</h1>
+        <form action="../sql/rutina_sql.php" method="post" class="admin-form">
 
-            <h4>Sexo:</h4>
-            <input type="text" placeholder="Hombre/Mujer" name="sexo" /><br>
-            
             <h4>Peso:</h4>
-            <input type="text" placeholder="peso" name="peso" /><br>
+            <input type="int" placeholder="peso" name="peso" /><br>
 
             <h4>Edad:</h4>
-            <input type="text" placeholder="edad" name="edad" /><br>
+            <input type="int" placeholder="edad" name="edad" /><br>
 
             <h4>Presion arterial:</h4>
             <input type="text" placeholder="presion arterial" name="pre_art" /><br>
@@ -31,6 +28,13 @@
             <h4>Latidos por minuto:</h4>
             <input type="text" placeholder="latidos por minuto" name="lat_min" /><br>
 
+            <select name="sexo" class="btn" style="width: auto;" required>
+                <label>Seleccionar</label></option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
+            <br><br>
+
             <div class="botones">
                 <div class="btnreg">
                     <button type="submit" class="btn">Obtener Rutina</button>
@@ -40,7 +44,9 @@
                     <a href="../index.php"><button class="btn" type="button">Cerrar sesion</button></a>
                 </div>
             </div>
-        </div>
+
+        </form>
+
     </div>
 </body>
 

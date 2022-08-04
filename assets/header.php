@@ -3,7 +3,7 @@
     <nav>
         <ul id="nav">
             <li><a href="../vistas/index_admins.php">Administracion</a></li>
-            <li><a href="quienes.htm">Ver Rutinas</a></li>
+            <li><a href="../img/rutinas/">Ver Rutinas</a></li>
         </ul>
     </nav>
 </header>
